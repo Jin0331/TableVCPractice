@@ -12,6 +12,10 @@
 		DB2AF7ED2B4A889700FFB834 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB2AF7EB2B4A889700FFB834 /* Main.storyboard */; };
 		DB2AF7EF2B4A889800FFB834 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB2AF7EE2B4A889800FFB834 /* Assets.xcassets */; };
 		DB2AF7F22B4A889800FFB834 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB2AF7F02B4A889800FFB834 /* LaunchScreen.storyboard */; };
+		DBDDDE132B4ABF2000DBDB62 /* Case2TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDDDE122B4ABF2000DBDB62 /* Case2TableViewController.swift */; };
+		DBDDDE152B4AC36E00DBDB62 /* Case3TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDDDE142B4AC36E00DBDB62 /* Case3TableViewController.swift */; };
+		DBDDDE172B4AC41E00DBDB62 /* Case3TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDDDE162B4AC41E00DBDB62 /* Case3TableViewCell.swift */; };
+		DBDDDE1A2B4AC66A00DBDB62 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DBDDDE192B4AC66A00DBDB62 /* IQKeyboardManagerSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,9 @@
 		DB2AF7EE2B4A889800FFB834 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB2AF7F12B4A889800FFB834 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB2AF7F32B4A889800FFB834 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBDDDE122B4ABF2000DBDB62 /* Case2TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Case2TableViewController.swift; sourceTree = "<group>"; };
+		DBDDDE142B4AC36E00DBDB62 /* Case3TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Case3TableViewController.swift; sourceTree = "<group>"; };
+		DBDDDE162B4AC41E00DBDB62 /* Case3TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Case3TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBDDDE1A2B4AC66A00DBDB62 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +65,9 @@
 				DB2AF7E52B4A889700FFB834 /* AppDelegate.swift */,
 				DB2AF7E72B4A889700FFB834 /* SceneDelegate.swift */,
 				DB2AF7EB2B4A889700FFB834 /* Main.storyboard */,
+				DBDDDE162B4AC41E00DBDB62 /* Case3TableViewCell.swift */,
+				DBDDDE142B4AC36E00DBDB62 /* Case3TableViewController.swift */,
+				DBDDDE122B4ABF2000DBDB62 /* Case2TableViewController.swift */,
 				DB2AF7EE2B4A889800FFB834 /* Assets.xcassets */,
 				DB2AF7F02B4A889800FFB834 /* LaunchScreen.storyboard */,
 				DB2AF7F32B4A889800FFB834 /* Info.plist */,
@@ -80,6 +91,9 @@
 			dependencies = (
 			);
 			name = TableVCPractice;
+			packageProductDependencies = (
+				DBDDDE192B4AC66A00DBDB62 /* IQKeyboardManagerSwift */,
+			);
 			productName = TableVCPractice;
 			productReference = DB2AF7E22B4A889700FFB834 /* TableVCPractice.app */;
 			productType = "com.apple.product-type.application";
@@ -108,6 +122,9 @@
 				Base,
 			);
 			mainGroup = DB2AF7D92B4A889700FFB834;
+			packageReferences = (
+				DBDDDE182B4AC66A00DBDB62 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
 			productRefGroup = DB2AF7E32B4A889700FFB834 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -136,7 +153,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB2AF7E62B4A889700FFB834 /* AppDelegate.swift in Sources */,
+				DBDDDE172B4AC41E00DBDB62 /* Case3TableViewCell.swift in Sources */,
 				DB2AF7E82B4A889700FFB834 /* SceneDelegate.swift in Sources */,
+				DBDDDE132B4ABF2000DBDB62 /* Case2TableViewController.swift in Sources */,
+				DBDDDE152B4AC36E00DBDB62 /* Case3TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +385,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DBDDDE182B4AC66A00DBDB62 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.16;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DBDDDE192B4AC66A00DBDB62 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DBDDDE182B4AC66A00DBDB62 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DB2AF7DA2B4A889700FFB834 /* Project object */;
 }

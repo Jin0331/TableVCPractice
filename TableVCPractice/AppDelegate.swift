@@ -1,11 +1,12 @@
 //
 //  AppDelegate.swift
-//  TableVCPractice
+//  test
 //
-//  Created by JinwooLee on 1/7/24.
+//  Created by JinwooLee on 1/5/24.
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        IQKeyboardManager.shared.enable = true
+        
         return true
     }
 

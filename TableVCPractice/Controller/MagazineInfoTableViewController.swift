@@ -14,15 +14,16 @@ class MagazineInfoTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.separatorStyle = .none// 구분선 없애기
 
     }
-    
-    //MARK: - section
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-        
-    }
-    
+//    
+//    //MARK: - section
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        return 1
+//        
+//    }
+//    
     //MARK: - cell
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return magzineList.magazine.count
@@ -41,13 +42,26 @@ class MagazineInfoTableViewController: UITableViewController {
         }
         
         // main label
+        cell.mainTitle.numberOfLines = 0
+        cell.mainTitle.font = UIFont(name:"HelveticaNeue-Bold", size: 25)
         cell.mainTitle.text = magzineList.magazine[indexPath.row].title
         
         // sub label
         cell.subTitle.text = magzineList.magazine[indexPath.row].subtitle
+        cell.subTitle.textColor = .lightGray
+        cell.subTitle.font = .boldSystemFont(ofSize: 16)
         
         // date label
-        cell.dateTitle.text = magzineList.magazine[indexPath.row].date
+        cell.dateTitle.textAlignment = .right
+        cell.dateTitle.font = .boldSystemFont(ofSize: 15)
+        cell.dateTitle.textColor = .lightGray
+
+        if let date = stringToDate(magzineList.magazine[indexPath.row].date) {
+            cell.dateTitle.text = date
+        } else {
+            cell.dateTitle.text = ""
+        }
+        
         
         return cell
     }

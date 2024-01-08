@@ -354,18 +354,18 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="60" id="Tj7-Kg-qjE"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ea2-Ao-DLQ">
-                                                    <rect key="frame" x="20" y="382" width="343" height="20.333333333333314"/>
+                                                    <rect key="frame" x="20" y="387" width="343" height="20.333333333333314"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fV-Zs-HEV">
-                                                    <rect key="frame" x="20" y="407.33333333333331" width="343" height="21"/>
+                                                    <rect key="frame" x="20" y="415.33333333333331" width="343" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -382,9 +382,9 @@
                                                 <constraint firstItem="4fV-Zs-HEV" firstAttribute="leading" secondItem="ea2-Ao-DLQ" secondAttribute="leading" id="l4M-lF-nSz"/>
                                                 <constraint firstItem="4fV-Zs-HEV" firstAttribute="trailing" secondItem="ea2-Ao-DLQ" secondAttribute="trailing" id="paz-H7-dWC"/>
                                                 <constraint firstItem="ff4-IJ-MSY" firstAttribute="top" secondItem="yzi-8f-u2y" secondAttribute="bottom" constant="15" id="qai-d7-yVd"/>
-                                                <constraint firstItem="ea2-Ao-DLQ" firstAttribute="top" secondItem="ff4-IJ-MSY" secondAttribute="bottom" constant="5" id="s80-rK-pFG"/>
+                                                <constraint firstItem="ea2-Ao-DLQ" firstAttribute="top" secondItem="ff4-IJ-MSY" secondAttribute="bottom" constant="10" id="s80-rK-pFG"/>
                                                 <constraint firstItem="yzi-8f-u2y" firstAttribute="top" secondItem="FPS-SH-i0v" secondAttribute="top" id="sLm-7p-tIL"/>
-                                                <constraint firstItem="4fV-Zs-HEV" firstAttribute="top" secondItem="ea2-Ao-DLQ" secondAttribute="bottom" constant="5" id="tqQ-xw-hH8"/>
+                                                <constraint firstItem="4fV-Zs-HEV" firstAttribute="top" secondItem="ea2-Ao-DLQ" secondAttribute="bottom" constant="8" id="tqQ-xw-hH8"/>
                                             </constraints>
                                         </view>
                                     </subviews>
@@ -491,11 +491,11 @@
             </objects>
             <point key="canvasLocation" x="76" y="1604"/>
         </scene>
-        <!--Item-->
+        <!--Magazine-->
         <scene sceneID="sxy-5y-4kG">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="obO-s3-qBx" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="iPN-nP-hDd"/>
+                    <tabBarItem key="tabBarItem" title="Magazine" image="4.circle" catalog="system" id="iPN-nP-hDd"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Svx-kh-OSD">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -515,6 +515,7 @@
         <image name="1.circle" catalog="system" width="128" height="123"/>
         <image name="2.circle" catalog="system" width="128" height="123"/>
         <image name="3.circle" catalog="system" width="128" height="123"/>
+        <image name="4.circle" catalog="system" width="128" height="123"/>
         <image name="bed.double.fill" catalog="system" width="128" height="82"/>
         <image name="iphone.gen1" catalog="system" width="112" height="128"/>
         <image name="moon.fill" catalog="system" width="128" height="123"/>

@@ -64,15 +64,31 @@
 			children = (
 				DB2AF7E52B4A889700FFB834 /* AppDelegate.swift */,
 				DB2AF7E72B4A889700FFB834 /* SceneDelegate.swift */,
-				DB2AF7EB2B4A889700FFB834 /* Main.storyboard */,
-				DBDDDE162B4AC41E00DBDB62 /* Case3TableViewCell.swift */,
-				DBDDDE142B4AC36E00DBDB62 /* Case3TableViewController.swift */,
-				DBDDDE122B4ABF2000DBDB62 /* Case2TableViewController.swift */,
+				DBDDDE292B4BDBB600DBDB62 /* View */,
+				DBDDDE2A2B4BDBCE00DBDB62 /* Controller */,
 				DB2AF7EE2B4A889800FFB834 /* Assets.xcassets */,
 				DB2AF7F02B4A889800FFB834 /* LaunchScreen.storyboard */,
 				DB2AF7F32B4A889800FFB834 /* Info.plist */,
 			);
 			path = TableVCPractice;
+			sourceTree = "<group>";
+		};
+		DBDDDE292B4BDBB600DBDB62 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DB2AF7EB2B4A889700FFB834 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DBDDDE2A2B4BDBCE00DBDB62 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DBDDDE162B4AC41E00DBDB62 /* Case3TableViewCell.swift */,
+				DBDDDE142B4AC36E00DBDB62 /* Case3TableViewController.swift */,
+				DBDDDE122B4ABF2000DBDB62 /* Case2TableViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

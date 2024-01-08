@@ -17,6 +17,10 @@
 		DBDDDE172B4AC41E00DBDB62 /* Case3TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDDDE162B4AC41E00DBDB62 /* Case3TableViewCell.swift */; };
 		DBDDDE1A2B4AC66A00DBDB62 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DBDDDE192B4AC66A00DBDB62 /* IQKeyboardManagerSwift */; };
 		DBDDDE302B4C109300DBDB62 /* Shoping.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDDDE2F2B4C109300DBDB62 /* Shoping.swift */; };
+		DBDDDE352B4C287200DBDB62 /* MagazineInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDDDE342B4C287200DBDB62 /* MagazineInfoTableViewController.swift */; };
+		DBDDDE372B4C289F00DBDB62 /* MagazineInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDDDE362B4C289F00DBDB62 /* MagazineInfoTableViewCell.swift */; };
+		DBDDDE392B4C299700DBDB62 /* MagazineInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDDDE382B4C299700DBDB62 /* MagazineInfo.swift */; };
+		DBDDDE3C2B4C2A0100DBDB62 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DBDDDE3B2B4C2A0100DBDB62 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,9 @@
 		DBDDDE142B4AC36E00DBDB62 /* Case3TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Case3TableViewController.swift; sourceTree = "<group>"; };
 		DBDDDE162B4AC41E00DBDB62 /* Case3TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Case3TableViewCell.swift; sourceTree = "<group>"; };
 		DBDDDE2F2B4C109300DBDB62 /* Shoping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shoping.swift; sourceTree = "<group>"; };
+		DBDDDE342B4C287200DBDB62 /* MagazineInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineInfoTableViewController.swift; sourceTree = "<group>"; };
+		DBDDDE362B4C289F00DBDB62 /* MagazineInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineInfoTableViewCell.swift; sourceTree = "<group>"; };
+		DBDDDE382B4C299700DBDB62 /* MagazineInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MagazineInfo.swift; path = ../../../../../MagazineInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBDDDE3C2B4C2A0100DBDB62 /* Kingfisher in Frameworks */,
 				DBDDDE1A2B4AC66A00DBDB62 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,6 +89,7 @@
 			children = (
 				DBDDDE162B4AC41E00DBDB62 /* Case3TableViewCell.swift */,
 				DB2AF7EB2B4A889700FFB834 /* Main.storyboard */,
+				DBDDDE362B4C289F00DBDB62 /* MagazineInfoTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -90,6 +99,7 @@
 			children = (
 				DBDDDE142B4AC36E00DBDB62 /* Case3TableViewController.swift */,
 				DBDDDE122B4ABF2000DBDB62 /* Case2TableViewController.swift */,
+				DBDDDE342B4C287200DBDB62 /* MagazineInfoTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -97,6 +107,7 @@
 		DBDDDE312B4C109B00DBDB62 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DBDDDE382B4C299700DBDB62 /* MagazineInfo.swift */,
 				DBDDDE2F2B4C109300DBDB62 /* Shoping.swift */,
 			);
 			path = Model;
@@ -120,6 +131,7 @@
 			name = TableVCPractice;
 			packageProductDependencies = (
 				DBDDDE192B4AC66A00DBDB62 /* IQKeyboardManagerSwift */,
+				DBDDDE3B2B4C2A0100DBDB62 /* Kingfisher */,
 			);
 			productName = TableVCPractice;
 			productReference = DB2AF7E22B4A889700FFB834 /* TableVCPractice.app */;
@@ -151,6 +163,7 @@
 			mainGroup = DB2AF7D92B4A889700FFB834;
 			packageReferences = (
 				DBDDDE182B4AC66A00DBDB62 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				DBDDDE3A2B4C2A0100DBDB62 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = DB2AF7E32B4A889700FFB834 /* Products */;
 			projectDirPath = "";
@@ -184,7 +197,10 @@
 				DB2AF7E82B4A889700FFB834 /* SceneDelegate.swift in Sources */,
 				DBDDDE132B4ABF2000DBDB62 /* Case2TableViewController.swift in Sources */,
 				DBDDDE302B4C109300DBDB62 /* Shoping.swift in Sources */,
+				DBDDDE372B4C289F00DBDB62 /* MagazineInfoTableViewCell.swift in Sources */,
 				DBDDDE152B4AC36E00DBDB62 /* Case3TableViewController.swift in Sources */,
+				DBDDDE352B4C287200DBDB62 /* MagazineInfoTableViewController.swift in Sources */,
+				DBDDDE392B4C299700DBDB62 /* MagazineInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +439,14 @@
 				minimumVersion = 6.5.16;
 			};
 		};
+		DBDDDE3A2B4C2A0100DBDB62 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.10.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -430,6 +454,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DBDDDE182B4AC66A00DBDB62 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
 			productName = IQKeyboardManagerSwift;
+		};
+		DBDDDE3B2B4C2A0100DBDB62 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DBDDDE3A2B4C2A0100DBDB62 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

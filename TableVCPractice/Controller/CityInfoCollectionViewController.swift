@@ -14,7 +14,9 @@ class CityInfoCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        // layout
+        collectionView.collectionViewLayout = CityInfoCollectionViewCell.configureCellLayout()
     }
     
     

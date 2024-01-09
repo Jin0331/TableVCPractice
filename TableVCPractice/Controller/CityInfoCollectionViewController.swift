@@ -15,6 +15,8 @@ class CityInfoCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let xib = UINib(nibName: CityInfoIdentifier.cellDesign1.rawValue, bundle: nil)
+        collectionView.register(xib, forCellWithReuseIdentifier:  CityInfoIdentifier.cellDesign1.rawValue)
         // layout
         collectionView.collectionViewLayout = CityInfoCollectionViewCell.configureCellLayout()
     }

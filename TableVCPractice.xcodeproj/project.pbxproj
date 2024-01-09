@@ -24,6 +24,7 @@
 		DBDDDE512B4D631600DBDB62 /* CityInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDDDE502B4D631600DBDB62 /* CityInfo.swift */; };
 		DBDDDE532B4D63B700DBDB62 /* CityInfoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDDDE522B4D63B700DBDB62 /* CityInfoCollectionViewController.swift */; };
 		DBDDDE552B4D642100DBDB62 /* CityInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDDDE542B4D642100DBDB62 /* CityInfoCollectionViewCell.swift */; };
+		DBDDDE592B4D7B8600DBDB62 /* CityInfoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBDDDE572B4D7B8600DBDB62 /* CityInfoCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		DBDDDE502B4D631600DBDB62 /* CityInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInfo.swift; sourceTree = "<group>"; };
 		DBDDDE522B4D63B700DBDB62 /* CityInfoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInfoCollectionViewController.swift; sourceTree = "<group>"; };
 		DBDDDE542B4D642100DBDB62 /* CityInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInfoCollectionViewCell.swift; sourceTree = "<group>"; };
+		DBDDDE572B4D7B8600DBDB62 /* CityInfoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityInfoCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				DB2AF7EB2B4A889700FFB834 /* Main.storyboard */,
 				DBDDDE362B4C289F00DBDB62 /* MagazineInfoTableViewCell.swift */,
 				DBDDDE542B4D642100DBDB62 /* CityInfoCollectionViewCell.swift */,
+				DBDDDE572B4D7B8600DBDB62 /* CityInfoCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				DB2AF7F22B4A889800FFB834 /* LaunchScreen.storyboard in Resources */,
 				DB2AF7EF2B4A889800FFB834 /* Assets.xcassets in Resources */,
 				DB2AF7ED2B4A889700FFB834 /* Main.storyboard in Resources */,
+				DBDDDE592B4D7B8600DBDB62 /* CityInfoCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

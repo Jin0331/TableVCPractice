@@ -430,48 +430,14 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CityInfoCollectionViewCell" id="OTC-z9-S1B" customClass="CityInfoCollectionViewCell" customModule="TableVCPractice" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CityInfoCollectionViewCell" id="OTC-z9-S1B">
                                 <rect key="frame" x="0.0" y="0.0" width="191" height="188"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="S5m-qg-ZTb">
                                     <rect key="frame" x="0.0" y="0.0" width="191" height="188"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3X9-OO-Oaq">
-                                            <rect key="frame" x="1" y="1" width="189" height="129"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PtR-JM-W6k">
-                                            <rect key="frame" x="1" y="140" width="189" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6eg-tw-C1P">
-                                            <rect key="frame" x="1" y="166" width="189" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="6eg-tw-C1P" secondAttribute="trailing" constant="1" id="0jT-Q8-8jR"/>
-                                        <constraint firstItem="3X9-OO-Oaq" firstAttribute="top" secondItem="S5m-qg-ZTb" secondAttribute="top" constant="1" id="2DO-jp-ddF"/>
-                                        <constraint firstItem="3X9-OO-Oaq" firstAttribute="leading" secondItem="S5m-qg-ZTb" secondAttribute="leading" constant="1" id="6N1-ny-eI5"/>
-                                        <constraint firstAttribute="trailing" secondItem="PtR-JM-W6k" secondAttribute="trailing" constant="1" id="FCZ-x5-AuD"/>
-                                        <constraint firstItem="6eg-tw-C1P" firstAttribute="top" secondItem="PtR-JM-W6k" secondAttribute="bottom" constant="5" id="OdG-Xm-JWX"/>
-                                        <constraint firstItem="6eg-tw-C1P" firstAttribute="leading" secondItem="S5m-qg-ZTb" secondAttribute="leading" constant="1" id="Qez-po-TjT"/>
-                                        <constraint firstAttribute="bottom" secondItem="6eg-tw-C1P" secondAttribute="bottom" constant="1" id="eH1-yP-zIH"/>
-                                        <constraint firstItem="PtR-JM-W6k" firstAttribute="leading" secondItem="S5m-qg-ZTb" secondAttribute="leading" constant="1" id="hEn-l6-jRd"/>
-                                        <constraint firstItem="PtR-JM-W6k" firstAttribute="top" secondItem="3X9-OO-Oaq" secondAttribute="bottom" constant="10" id="p1H-v6-xjk"/>
-                                        <constraint firstAttribute="trailing" secondItem="3X9-OO-Oaq" secondAttribute="trailing" constant="1" id="rJI-Mt-Fio"/>
-                                    </constraints>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="191" height="188"/>
-                                <connections>
-                                    <outlet property="cellImageView" destination="3X9-OO-Oaq" id="N6N-TL-beR"/>
-                                    <outlet property="mainTitleLabel" destination="PtR-JM-W6k" id="zdj-cE-55x"/>
-                                    <outlet property="subTitleLabel" destination="6eg-tw-C1P" id="Pxw-gF-ACd"/>
-                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>

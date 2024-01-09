@@ -9,7 +9,8 @@ import UIKit
 
 class CityInfoViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    var cityList = CityInfo()
+    var cityList = CityInfo().city
+    var segmentIndex : Int = 0
     
     @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var cityCollectionView: UICollectionView!
@@ -26,29 +27,41 @@ class CityInfoViewController: UIViewController, UICollectionViewDelegate, UIColl
         
         // layout
         cityCollectionView.collectionViewLayout = CityInfoCollectionViewCell.configureCellLayout()
+        
+        segmentMoved(segmentControl)
     }
     
     @IBAction func segmentMoved(_ sender: UISegmentedControl) {
         print(sender.selectedSegmentIndex)
+        cityList = CityInfo().city // 초기화
         
+        segmentIndex = sender.selectedSegmentIndex
+        
+        print("segmentIndex \(segmentIndex)")
+        
+        switch segmentIndex {
+        case 1,2 :
+            cityList = CityInfo.travleFiltering(arr: cityList, segmentIndex: segmentIndex)
+        default :
+            cityList = CityInfo().city
+    }
+        cityCollectionView.reloadData()
     }
     
     //MARK: - Collection View 관련
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return cityList.city.count
+        return cityList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = cityCollectionView.dequeueReusableCell(withReuseIdentifier: CityInfoIdentifier.cellDesign1.rawValue, for: indexPath) as! CityInfoCollectionViewCell
         
-        let items = cityList.city[indexPath.item]
+        let items = cityList[indexPath.item]
     
         cell.configureCell(cell: items)
-        
-//        cell.isHidden = false
-        
+
         return cell
     }
 

@@ -19,7 +19,6 @@ enum CityInfoIdentifier : String, CaseIterable {
     case cellDesign1 = "CityInfoCollectionViewCell"
 }
 
-
 struct CityInfo {
     let city: [City] = [
         City(city_name: "방콕", city_english_name: "Bangkok", city_explain: "방콕, 파타야, 후아힌, 코사멧, 코사무이", city_image: "https://i.namu.wiki/i/OUKHuXT-QXe-wDgGE_9hMfEW9Sb3lyMWl0SSbpTQyfl0Lw3rs_A_DuVyXBNXTFG3FUkfmy7hBjL68dgLzssEQg.webp", domestic_travel: false),

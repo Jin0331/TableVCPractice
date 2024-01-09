@@ -25,6 +25,7 @@
 		DBDDDE532B4D63B700DBDB62 /* CityInfoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDDDE522B4D63B700DBDB62 /* CityInfoCollectionViewController.swift */; };
 		DBDDDE552B4D642100DBDB62 /* CityInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDDDE542B4D642100DBDB62 /* CityInfoCollectionViewCell.swift */; };
 		DBDDDE592B4D7B8600DBDB62 /* CityInfoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBDDDE572B4D7B8600DBDB62 /* CityInfoCollectionViewCell.xib */; };
+		DBDDDE5B2B4D828D00DBDB62 /* CityInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDDDE5A2B4D828D00DBDB62 /* CityInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		DBDDDE522B4D63B700DBDB62 /* CityInfoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInfoCollectionViewController.swift; sourceTree = "<group>"; };
 		DBDDDE542B4D642100DBDB62 /* CityInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInfoCollectionViewCell.swift; sourceTree = "<group>"; };
 		DBDDDE572B4D7B8600DBDB62 /* CityInfoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityInfoCollectionViewCell.xib; sourceTree = "<group>"; };
+		DBDDDE5A2B4D828D00DBDB62 /* CityInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				DBDDDE122B4ABF2000DBDB62 /* Case2TableViewController.swift */,
 				DBDDDE342B4C287200DBDB62 /* MagazineInfoTableViewController.swift */,
 				DBDDDE522B4D63B700DBDB62 /* CityInfoCollectionViewController.swift */,
+				DBDDDE5A2B4D828D00DBDB62 /* CityInfoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				DBDDDE532B4D63B700DBDB62 /* CityInfoCollectionViewController.swift in Sources */,
 				DBDDDE152B4AC36E00DBDB62 /* Case3TableViewController.swift in Sources */,
 				DBDDDE352B4C287200DBDB62 /* MagazineInfoTableViewController.swift in Sources */,
+				DBDDDE5B2B4D828D00DBDB62 /* CityInfoViewController.swift in Sources */,
 				DBDDDE552B4D642100DBDB62 /* CityInfoCollectionViewCell.swift in Sources */,
 				DBDDDE392B4C299700DBDB62 /* MagazineInfo.swift in Sources */,
 			);

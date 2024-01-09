@@ -21,6 +21,9 @@
 		DBDDDE372B4C289F00DBDB62 /* MagazineInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDDDE362B4C289F00DBDB62 /* MagazineInfoTableViewCell.swift */; };
 		DBDDDE392B4C299700DBDB62 /* MagazineInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDDDE382B4C299700DBDB62 /* MagazineInfo.swift */; };
 		DBDDDE3C2B4C2A0100DBDB62 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DBDDDE3B2B4C2A0100DBDB62 /* Kingfisher */; };
+		DBDDDE512B4D631600DBDB62 /* CityInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDDDE502B4D631600DBDB62 /* CityInfo.swift */; };
+		DBDDDE532B4D63B700DBDB62 /* CityInfoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDDDE522B4D63B700DBDB62 /* CityInfoCollectionViewController.swift */; };
+		DBDDDE552B4D642100DBDB62 /* CityInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDDDE542B4D642100DBDB62 /* CityInfoCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		DBDDDE342B4C287200DBDB62 /* MagazineInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineInfoTableViewController.swift; sourceTree = "<group>"; };
 		DBDDDE362B4C289F00DBDB62 /* MagazineInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineInfoTableViewCell.swift; sourceTree = "<group>"; };
 		DBDDDE382B4C299700DBDB62 /* MagazineInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MagazineInfo.swift; path = ../../../../../MagazineInfo.swift; sourceTree = "<group>"; };
+		DBDDDE502B4D631600DBDB62 /* CityInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInfo.swift; sourceTree = "<group>"; };
+		DBDDDE522B4D63B700DBDB62 /* CityInfoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInfoCollectionViewController.swift; sourceTree = "<group>"; };
+		DBDDDE542B4D642100DBDB62 /* CityInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInfoCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +96,7 @@
 				DBDDDE162B4AC41E00DBDB62 /* Case3TableViewCell.swift */,
 				DB2AF7EB2B4A889700FFB834 /* Main.storyboard */,
 				DBDDDE362B4C289F00DBDB62 /* MagazineInfoTableViewCell.swift */,
+				DBDDDE542B4D642100DBDB62 /* CityInfoCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -100,6 +107,7 @@
 				DBDDDE142B4AC36E00DBDB62 /* Case3TableViewController.swift */,
 				DBDDDE122B4ABF2000DBDB62 /* Case2TableViewController.swift */,
 				DBDDDE342B4C287200DBDB62 /* MagazineInfoTableViewController.swift */,
+				DBDDDE522B4D63B700DBDB62 /* CityInfoCollectionViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -109,6 +117,7 @@
 			children = (
 				DBDDDE382B4C299700DBDB62 /* MagazineInfo.swift */,
 				DBDDDE2F2B4C109300DBDB62 /* Shoping.swift */,
+				DBDDDE502B4D631600DBDB62 /* CityInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -194,12 +203,15 @@
 			files = (
 				DB2AF7E62B4A889700FFB834 /* AppDelegate.swift in Sources */,
 				DBDDDE172B4AC41E00DBDB62 /* Case3TableViewCell.swift in Sources */,
+				DBDDDE512B4D631600DBDB62 /* CityInfo.swift in Sources */,
 				DB2AF7E82B4A889700FFB834 /* SceneDelegate.swift in Sources */,
 				DBDDDE132B4ABF2000DBDB62 /* Case2TableViewController.swift in Sources */,
 				DBDDDE302B4C109300DBDB62 /* Shoping.swift in Sources */,
 				DBDDDE372B4C289F00DBDB62 /* MagazineInfoTableViewCell.swift in Sources */,
+				DBDDDE532B4D63B700DBDB62 /* CityInfoCollectionViewController.swift in Sources */,
 				DBDDDE152B4AC36E00DBDB62 /* Case3TableViewController.swift in Sources */,
 				DBDDDE352B4C287200DBDB62 /* MagazineInfoTableViewController.swift in Sources */,
+				DBDDDE552B4D642100DBDB62 /* CityInfoCollectionViewCell.swift in Sources */,
 				DBDDDE392B4C299700DBDB62 /* MagazineInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

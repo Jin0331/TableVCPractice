@@ -47,23 +47,6 @@ class CityInfoViewController: UIViewController {
     }
         cityCollectionView.reloadData()
     }
-    
-    //MARK: - Collection View 관련
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        return cityList.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        let cell = cityCollectionView.dequeueReusableCell(withReuseIdentifier: CityInfoIdentifier.cellDesign1.rawValue, for: indexPath) as! CityInfoCollectionViewCell
-        
-        let items = cityList[indexPath.item]
-
-        cell.configureImageIntoCell(cell: items)
-
-        return cell
-    }
 
 }
 
@@ -97,5 +80,22 @@ extension CityInfoViewController : UICollectionViewDelegate, UICollectionViewDat
         })
 //        print(temp.compactMap{$0})
         return temp.compactMap{$0}
+    }
+    
+    //MARK: - Collection View 관련
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        return cityList.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = cityCollectionView.dequeueReusableCell(withReuseIdentifier: CityInfoIdentifier.cellDesign1.rawValue, for: indexPath) as! CityInfoCollectionViewCell
+        
+        let items = cityList[indexPath.item]
+
+        cell.configureImageIntoCell(cell: items)
+
+        return cell
     }
 }

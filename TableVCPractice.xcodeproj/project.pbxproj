@@ -120,10 +120,10 @@
 		DBDDDE312B4C109B00DBDB62 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DBC335382B4E8B5500EBBEC9 /* Setting.swift */,
 				DBDDDE2F2B4C109300DBDB62 /* Shoping.swift */,
 				DBDDDE382B4C299700DBDB62 /* MagazineInfo.swift */,
 				DBDDDE502B4D631600DBDB62 /* CityInfo.swift */,
-				DBC335382B4E8B5500EBBEC9 /* Setting.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

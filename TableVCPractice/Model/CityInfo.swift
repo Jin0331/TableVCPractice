@@ -37,19 +37,4 @@ struct CityInfo {
         City(city_name: "토론토", city_english_name: "Toronto", city_explain: "토론토, 나이아가라, 킹스턴, 블루마운틴", city_image: "https://i.namu.wiki/i/I7os9ysTEyBl4sVe-9AN-dHFmJ95e0j3P03DIQiVwIrLOi_RAbo311TdKiRFb0LMyUkbhAPzASfH6JR25cVXj3vYNR2S9koQBZsWrEitWWRe855pPYigkUFUvXGDn1xTF2jxneC4NRl7zcRY5_iBRA.webp", domestic_travel: false),
         City(city_name: "대전", city_english_name: "Daejeon", city_explain: "대전, 성심당", city_image: "https://i.namu.wiki/i/fFklvoNy6HqB2XtGHad8aZ9zItaH-ow-H97JlYV5OvgYHWgOfjiL4OPB_7UWLbKdQhJXlIrxs1Q25WomVNz1McMgUZmlME4OpNOI1KUMrOkR05LWsoU7PfXLI_EOKZdy6PCx9Bu7JBNTLbDn8RvdQA.webp", domestic_travel: true),
     ]
-    
-    static func travleFiltering(arr : [City], segmentIndex sg : Int ) -> [City] {
-        let temp = arr.map({ (item : City) -> City? in
-            print(type(of: item.domestic_travel))
-            print(sg)
-            let sgBool = sg == 1 ? true : false // 0은 들어오지 않는다. 오직 1,2
-            if item.domestic_travel == sgBool {
-                return item
-            } else {
-                return nil
-            }
-        })
-//        print(temp.compactMap{$0})
-        return temp.compactMap{$0}
-    }
 }

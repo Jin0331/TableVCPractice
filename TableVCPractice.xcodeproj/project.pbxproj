@@ -12,6 +12,7 @@
 		DB2AF7ED2B4A889700FFB834 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB2AF7EB2B4A889700FFB834 /* Main.storyboard */; };
 		DB2AF7EF2B4A889800FFB834 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB2AF7EE2B4A889800FFB834 /* Assets.xcassets */; };
 		DB2AF7F22B4A889800FFB834 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB2AF7F02B4A889800FFB834 /* LaunchScreen.storyboard */; };
+		DBC335392B4E8B5500EBBEC9 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC335382B4E8B5500EBBEC9 /* Setting.swift */; };
 		DBDDDE132B4ABF2000DBDB62 /* Case2TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDDDE122B4ABF2000DBDB62 /* Case2TableViewController.swift */; };
 		DBDDDE152B4AC36E00DBDB62 /* Case3TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDDDE142B4AC36E00DBDB62 /* Case3TableViewController.swift */; };
 		DBDDDE172B4AC41E00DBDB62 /* Case3TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDDDE162B4AC41E00DBDB62 /* Case3TableViewCell.swift */; };
@@ -36,6 +37,7 @@
 		DB2AF7EE2B4A889800FFB834 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB2AF7F12B4A889800FFB834 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB2AF7F32B4A889800FFB834 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBC335382B4E8B5500EBBEC9 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		DBDDDE122B4ABF2000DBDB62 /* Case2TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Case2TableViewController.swift; sourceTree = "<group>"; };
 		DBDDDE142B4AC36E00DBDB62 /* Case3TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Case3TableViewController.swift; sourceTree = "<group>"; };
 		DBDDDE162B4AC41E00DBDB62 /* Case3TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Case3TableViewCell.swift; sourceTree = "<group>"; };
@@ -84,12 +86,12 @@
 			children = (
 				DB2AF7E52B4A889700FFB834 /* AppDelegate.swift */,
 				DB2AF7E72B4A889700FFB834 /* SceneDelegate.swift */,
+				DBDDDE312B4C109B00DBDB62 /* Model */,
 				DBDDDE2B2B4C102A00DBDB62 /* View */,
 				DBDDDE2C2B4C103A00DBDB62 /* Controller */,
 				DB2AF7EE2B4A889800FFB834 /* Assets.xcassets */,
 				DB2AF7F02B4A889800FFB834 /* LaunchScreen.storyboard */,
 				DB2AF7F32B4A889800FFB834 /* Info.plist */,
-				DBDDDE312B4C109B00DBDB62 /* Model */,
 			);
 			path = TableVCPractice;
 			sourceTree = "<group>";
@@ -97,11 +99,11 @@
 		DBDDDE2B2B4C102A00DBDB62 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				DBDDDE162B4AC41E00DBDB62 /* Case3TableViewCell.swift */,
 				DB2AF7EB2B4A889700FFB834 /* Main.storyboard */,
+				DBDDDE162B4AC41E00DBDB62 /* Case3TableViewCell.swift */,
 				DBDDDE362B4C289F00DBDB62 /* MagazineInfoTableViewCell.swift */,
-				DBDDDE542B4D642100DBDB62 /* CityInfoCollectionViewCell.swift */,
 				DBDDDE572B4D7B8600DBDB62 /* CityInfoCollectionViewCell.xib */,
+				DBDDDE542B4D642100DBDB62 /* CityInfoCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -109,8 +111,8 @@
 		DBDDDE2C2B4C103A00DBDB62 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				DBDDDE142B4AC36E00DBDB62 /* Case3TableViewController.swift */,
 				DBDDDE122B4ABF2000DBDB62 /* Case2TableViewController.swift */,
+				DBDDDE142B4AC36E00DBDB62 /* Case3TableViewController.swift */,
 				DBDDDE342B4C287200DBDB62 /* MagazineInfoTableViewController.swift */,
 				DBDDDE522B4D63B700DBDB62 /* CityInfoCollectionViewController.swift */,
 				DBDDDE5A2B4D828D00DBDB62 /* CityInfoViewController.swift */,
@@ -121,9 +123,10 @@
 		DBDDDE312B4C109B00DBDB62 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DBDDDE382B4C299700DBDB62 /* MagazineInfo.swift */,
 				DBDDDE2F2B4C109300DBDB62 /* Shoping.swift */,
+				DBDDDE382B4C299700DBDB62 /* MagazineInfo.swift */,
 				DBDDDE502B4D631600DBDB62 /* CityInfo.swift */,
+				DBC335382B4E8B5500EBBEC9 /* Setting.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				DBDDDE172B4AC41E00DBDB62 /* Case3TableViewCell.swift in Sources */,
 				DBDDDE512B4D631600DBDB62 /* CityInfo.swift in Sources */,
 				DB2AF7E82B4A889700FFB834 /* SceneDelegate.swift in Sources */,
+				DBC335392B4E8B5500EBBEC9 /* Setting.swift in Sources */,
 				DBDDDE132B4ABF2000DBDB62 /* Case2TableViewController.swift in Sources */,
 				DBDDDE302B4C109300DBDB62 /* Shoping.swift in Sources */,
 				DBDDDE372B4C289F00DBDB62 /* MagazineInfoTableViewCell.swift in Sources */,

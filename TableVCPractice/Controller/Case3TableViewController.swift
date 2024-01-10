@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Case3TableViewController: UITableViewController, UITextFieldDelegate {
+class Case3TableViewController: UITableViewController {
        
     //MARK: - Controller IBOutlet
     @IBOutlet weak var textField: UITextField!
@@ -26,7 +26,6 @@ class Case3TableViewController: UITableViewController, UITextFieldDelegate {
         // return key사용
         textField.delegate = self
         
-        tableView.separatorInset = UIEdgeInsets(top: 1, left: 0, bottom: 1, right: 0)
     }
     
     //MARK: - Table View
@@ -42,44 +41,24 @@ class Case3TableViewController: UITableViewController, UITextFieldDelegate {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Case3TableViewCell", for: indexPath) as! Case3TableViewCell
                
+        cell.setCellDesign()
         cell.cellTextLabel.text = shopingList.shoping[indexPath.row].item
-        cell.cellTextLabel.font = .boldSystemFont(ofSize: 11)
         
         // 3항 연산자를 이용해서 image set,, Boolean 값에 따라
         let leftImage = shopingList.shoping[indexPath.row].checkBox ? "checkmark.square.fill" : "checkmark.square"
-        let rightImage = shopingList.shoping[indexPath.row].bookMark ? "star.fill" : "star"
-        
         cell.leftButton.setImage(UIImage(systemName: leftImage), for: .normal)
-        cell.rightButton.setImage(UIImage(systemName: rightImage), for: .normal)
-        
-        cell.leftButton.tintColor = .black
-        cell.rightButton.tintColor = .black
-        
         cell.leftButton.tag = indexPath.row
-        cell.rightButton.tag = indexPath.row
-        
         cell.leftButton.addTarget(self, action: #selector(leftButtonClicked), for: .touchUpInside)
+
+        
+        let rightImage = shopingList.shoping[indexPath.row].bookMark ? "star.fill" : "star"
+        cell.rightButton.setImage(UIImage(systemName: rightImage), for: .normal)
+        cell.rightButton.tag = indexPath.row
         cell.rightButton.addTarget(self, action: #selector(rightButtonClicked), for: .touchUpInside)
         
         return cell
     }
     
-    @objc func leftButtonClicked(_ sender : UIButton) {
-        print("\(sender.tag) - 버튼이 클릭되었다")
-        print(shopingList.shoping[sender.tag].item)
-        
-        shopingList.shoping[sender.tag].checkBox.toggle()
-        tableView.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: .fade)
-        
-    }
-    
-    @objc func rightButtonClicked(_ sender : UIButton) {
-        print("\(sender.tag) - 버튼이 클릭되었다")
-        print(shopingList.shoping[sender.tag].item)
-        
-        shopingList.shoping[sender.tag].bookMark.toggle()
-        tableView.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: .fade)
-    }
     
 //    //MARK: - IBAction
     @IBAction func addButton(_ sender: UIButton) {
@@ -88,13 +67,12 @@ class Case3TableViewController: UITableViewController, UITextFieldDelegate {
             shopingList.shoping.append(Shoping(item: textField.text!, checkBox: false, bookMark: false))
             
             tableView.reloadData() // Table View update!
-        } else {
-            print("공백들어옴")
         }
-        
     }
+}
+
+extension Case3TableViewController : UITextFieldDelegate {
     
-    //MARK: -delegate function
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {   //delegate method
        textField.resignFirstResponder()
         
@@ -102,11 +80,25 @@ class Case3TableViewController: UITableViewController, UITextFieldDelegate {
             shopingList.shoping.append(Shoping(item: textField.text!, checkBox: false, bookMark: false))
             
             tableView.reloadData() // Table View update!
-        } else {
-            print("공백들어옴")
         }
         
        return true
     }
+}
+
+extension Case3TableViewController {
+    @objc func leftButtonClicked(_ sender : UIButton) {
+        print(shopingList.shoping[sender.tag].item)
+        
+        shopingList.shoping[sender.tag].checkBox.toggle()
+        tableView.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: .fade)
+        
+    }
     
+    @objc func rightButtonClicked(_ sender : UIButton) {
+        print(shopingList.shoping[sender.tag].item)
+        
+        shopingList.shoping[sender.tag].bookMark.toggle()
+        tableView.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: .fade)
+    }
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CityInfoViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class CityInfoViewController: UIViewController {
     
     var cityList = CityInfo().city
     var segmentIndex : Int = 0
@@ -26,7 +26,7 @@ class CityInfoViewController: UIViewController, UICollectionViewDelegate, UIColl
         cityCollectionView.register(xib, forCellWithReuseIdentifier:  CityInfoIdentifier.cellDesign1.rawValue)
         
         // layout
-        cityCollectionView.collectionViewLayout = CityInfoCollectionViewCell.configureCellLayout()
+        cityCollectionView.collectionViewLayout = configureCellLayout()
         
         segmentMoved(segmentControl)
     }
@@ -41,7 +41,7 @@ class CityInfoViewController: UIViewController, UICollectionViewDelegate, UIColl
         
         switch segmentIndex {
         case 1,2 :
-            cityList = CityInfo.travleFiltering(arr: cityList, segmentIndex: segmentIndex)
+            cityList = travleFiltering(arr: cityList, segmentIndex: segmentIndex)
         default :
             cityList = CityInfo().city
     }
@@ -59,10 +59,43 @@ class CityInfoViewController: UIViewController, UICollectionViewDelegate, UIColl
         let cell = cityCollectionView.dequeueReusableCell(withReuseIdentifier: CityInfoIdentifier.cellDesign1.rawValue, for: indexPath) as! CityInfoCollectionViewCell
         
         let items = cityList[indexPath.item]
-    
-        cell.configureCell(cell: items)
+
+        cell.configureImageIntoCell(cell: items)
 
         return cell
     }
 
+}
+
+extension CityInfoViewController : UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func configureCellLayout () -> UICollectionViewFlowLayout {
+        let layout = UICollectionViewFlowLayout()
+        
+        let spacing : CGFloat = 15
+        let cellWidth = UIScreen.main.bounds.width - (spacing * 3)
+        
+        layout.itemSize = CGSize(width: cellWidth / 2, height: (cellWidth+60) / 2) // 셀의 크기
+        layout.sectionInset = UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)
+//        layout.minimumLineSpacing = 10
+//        layout.minimumInteritemSpacing = 5
+        layout.scrollDirection = .vertical
+        
+        return layout
+    }
+    
+    func travleFiltering(arr : [City], segmentIndex sg : Int ) -> [City] {
+        let temp = arr.map({ (item : City) -> City? in
+            print(type(of: item.domestic_travel))
+            print(sg)
+            let sgBool = sg == 1 ? true : false // 0은 들어오지 않는다. 오직 1,2
+            if item.domestic_travel == sgBool {
+                return item
+            } else {
+                return nil
+            }
+        })
+//        print(temp.compactMap{$0})
+        return temp.compactMap{$0}
+    }
 }

@@ -21,6 +21,6 @@ class TravelViewController: UIViewController {
         travelLabel.font = .boldSystemFont(ofSize: 25)
         navigationItem.title = "관광지 화면"
         navigationController?.navigationBar.tintColor = .black
-        navigationItem.leftBarButtonItem?.title = nil
+        navigationController?.navigationBar.topItem?.title = " "
     }
 }

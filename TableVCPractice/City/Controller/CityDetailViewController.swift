@@ -65,6 +65,7 @@ extension CityDetailViewController : UITableViewDelegate, UITableViewDataSource 
             let cell = tableView.dequeueReusableCell(withIdentifier: CityDetailTableViewCell.identifier, for: indexPath) as! CityDetailTableViewCell
             
             cell.configureImageIntoCell(cell: cityDetail.travel[indexPath.row])
+            cell.ratingComoView(cell: cityDetail.travel[indexPath.row]) // cosmo를 이용한 별찍기
             
             return cell
             
@@ -98,7 +99,4 @@ extension CityDetailViewController : UITableViewDelegate, UITableViewDataSource 
             navigationController?.pushViewController(vc, animated: true)
         }
     }
-    
-    
-    
 }

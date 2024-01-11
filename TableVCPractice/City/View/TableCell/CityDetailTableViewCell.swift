@@ -19,11 +19,10 @@ class CityDetailTableViewCell: UITableViewCell {
     @IBOutlet weak var cosmosView: CosmosView!
     
     override func awakeFromNib() {
-        super.awakeFromNib()
-        print(#function)
+        
         configTableCell()
+        
     }
-    
 }
 
 extension CityDetailTableViewCell {
@@ -43,7 +42,20 @@ extension CityDetailTableViewCell {
     }
     
     func ratingComoView(cell : Travel) {
-        // 구현 예정
+        cosmosView.settings.totalStars = 5
+        cosmosView.settings.emptyColor = .white
+        cosmosView.settings.textFont = .systemFont(ofSize: 15)
+        cosmosView.settings.textColor = .gray
+        cosmosView.settings.starSize = 17
+        
+        cosmosView.rating = cell.grade ?? 0
+        
+        // 콤마넣기
+        let numberFormatter: NumberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        
+        cosmosView.text = "(\(cell.grade!)) · 저장 \(numberFormatter.string(for: cell.save)!)"
+
     }
 }
 
@@ -59,7 +71,6 @@ extension CityDetailTableViewCell {
         subTextLabel.textColor = .gray
         subTextLabel.numberOfLines = 0
         
-//        cosmosView.rating = 5
         mainImageView.clipsToBounds = true
         mainImageView.contentMode = .scaleToFill
         mainImageView.layer.cornerRadius = 10

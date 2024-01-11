@@ -15,9 +15,9 @@ struct City {
 }
 
 // identifier
-enum CityInfoIdentifier : String, CaseIterable {
-    case cellDesign1 = "CityInfoCollectionViewCell"
-}
+//enum CityInfoIdentifier : String, CaseIterable {
+//    case cellDesign1 = "CityInfoCollectionViewCell"
+//}
 
 struct CityInfo {
     let city: [City] = [

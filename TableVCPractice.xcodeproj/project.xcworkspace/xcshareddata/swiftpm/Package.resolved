@@ -1,12 +1,12 @@
 {
   "pins" : [
     {
-      "identity" : "iqkeyboardmanager",
+      "identity" : "cosmos",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/hackiftekhar/IQKeyboardManager",
+      "location" : "https://github.com/evgenyneu/Cosmos.git",
       "state" : {
-        "revision" : "c00b1ae9fa1ad8af4465bb6ca901f6943fc98eba",
-        "version" : "6.5.16"
+        "revision" : "1d722aefaba9eafa22e32da46ce473e051c4e445",
+        "version" : "24.0.0"
       }
     },
     {

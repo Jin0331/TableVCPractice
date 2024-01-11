@@ -12,18 +12,39 @@ protocol CityInfoCellConfigure {
     func defaultCellConfigure()
 }
 
-class CityInfoCollectionViewCell: UICollectionViewCell, CityInfoCellConfigure {
+class CityInfoCollectionViewCell: UICollectionViewCell {
 
-    
     @IBOutlet weak var cellImageView: UIImageView!
     @IBOutlet weak var mainTitleLabel: UILabel!
     @IBOutlet weak var subTitleLabel: UILabel!
+    
+    static let identifier = "CityInfoCollectionViewCell"
     
     // 공통적인 부분에 대한 설정. 코드 경량화를 위한 부분. class 아님
     override func awakeFromNib() {
         defaultCellConfigure()
         
     }
+}
+
+extension CityInfoCollectionViewCell {
+    
+    func configureImageIntoCell(cell : City) {
+        
+        // Image
+        let url = URL(string: cell.city_image)
+        if let l = url {
+            cellImageView.kf.setImage(with: l)
+            
+            // Label
+            // Array의 Joined를 이용한 문자열 처리
+            mainTitleLabel.text = [cell.city_name, cell.city_english_name].joined(separator: " | ")
+            subTitleLabel.text = cell.city_explain
+        }
+    }
+}
+
+extension CityInfoCollectionViewCell : CityInfoCellConfigure {
     
     func defaultCellConfigure() {
         cellImageView.contentMode = .scaleAspectFill
@@ -41,23 +62,5 @@ class CityInfoCollectionViewCell: UICollectionViewCell, CityInfoCellConfigure {
         subTitleLabel.font = .boldSystemFont(ofSize: 10)
         subTitleLabel.textColor = .lightGray
         subTitleLabel.numberOfLines = 0
-    }
-    
-}
-
-extension CityInfoCollectionViewCell {
-    
-    func configureImageIntoCell(cell : City) {
-        
-        // Image
-        let url = URL(string: cell.city_image)
-        if let l = url {
-            cellImageView.kf.setImage(with: l)
-            
-            // Label
-            // Array의 Joined를 이용한 문자열 처리
-            mainTitleLabel.text = [cell.city_name, cell.city_english_name].joined(separator: " | ")
-            subTitleLabel.text = cell.city_explain
-        }
     }
 }

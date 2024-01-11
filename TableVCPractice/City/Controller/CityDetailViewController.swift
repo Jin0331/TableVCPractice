@@ -19,6 +19,8 @@ class CityDetailViewController: UIViewController {
         super.viewDidLoad()
 
         navigationItem.title = "도시 상세 정보"
+        
+        configureTableView()
     }
 
 }
@@ -28,7 +30,7 @@ extension CityDetailViewController : UITableViewDelegate, UITableViewDataSource 
     
     func configureTableView() {
     
-        detailTableView.backgroundColor = .clear
+//        detailTableView.backgroundColor = .clear
         
         detailTableView.delegate = self
         detailTableView.dataSource = self
@@ -36,6 +38,18 @@ extension CityDetailViewController : UITableViewDelegate, UITableViewDataSource 
         let xib1 = UINib(nibName: CityDetailTableViewCell.identifier, bundle: nil)
         detailTableView.register(xib1, forCellReuseIdentifier: CityDetailTableViewCell.identifier)
         
+        let xib2 = UINib(nibName: ADTableViewCell.identifier, bundle: nil)
+        detailTableView.register(xib2, forCellReuseIdentifier: ADTableViewCell.identifier)
+        
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let travel = cityDetail.travel[indexPath.row]
+        
+        if !travel.ad {
+            return 150
+        } else {
+            return 110
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -44,15 +58,19 @@ extension CityDetailViewController : UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let city = cityDetail.travel[indexPath.row]
+        let travel = cityDetail.travel[indexPath.row]
         
-        if !city.ad {
-            let cell = tableView.dequeueReusableCell(withIdentifier: CityDetailTableViewCell.identifier, for: indexPath) as! CityDetailTableViewCell //스토리보드와 연결하면서 해당 클래스의 변수 기능을 쓰는 것, 인스턴스를 생성하는 것!
+        if !travel.ad {
+            let cell = tableView.dequeueReusableCell(withIdentifier: CityDetailTableViewCell.identifier, for: indexPath) as! CityDetailTableViewCell
+            
+            cell.configureImageIntoCell(cell: cityDetail.travel[indexPath.row])
             
             return cell
             
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: ADTableViewCell.identifier, for: indexPath) as! ADTableViewCell //스토리보드와 연결하면서 해당 클래스의 변수 기능을 쓰는 것, 인스턴스를 생성하는 것!
+            let cell = tableView.dequeueReusableCell(withIdentifier: ADTableViewCell.identifier, for: indexPath) as! ADTableViewCell
+            
+            cell.configureTextIntoCell(cell: travel)
             
             return cell
         }

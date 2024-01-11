@@ -20,7 +20,7 @@ class CityDetailTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        print(#function)
         configTableCell()
     }
     
@@ -54,18 +54,20 @@ extension CityDetailTableViewCell {
         
         self.backgroundColor = .clear
         
-        mainTextLabel.font = .boldSystemFont(ofSize: 15)
-        subTextLabel.font = .systemFont(ofSize: 13)
+        mainTextLabel.font = .boldSystemFont(ofSize: 18)
+        subTextLabel.font = .systemFont(ofSize: 15)
         subTextLabel.textColor = .gray
+        subTextLabel.numberOfLines = 0
         
-        cosmosView.rating = 5
+//        cosmosView.rating = 5
         mainImageView.clipsToBounds = true
-        mainImageView.contentMode = .scaleAspectFit
+        mainImageView.contentMode = .scaleToFill
         mainImageView.layer.cornerRadius = 10
         
         subImageView.clipsToBounds = true
         subImageView.image = UIImage(systemName: "heart")
         subImageView.backgroundColor = .clear
+        subImageView.tintColor = .white
         
     }
     

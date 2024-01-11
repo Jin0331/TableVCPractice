@@ -17,15 +17,15 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODD-KZ-8pN">
-                        <rect key="frame" x="55" y="10" width="291" height="102"/>
+                        <rect key="frame" x="16" y="15" width="369" height="92"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rlq-DR-lD4">
-                        <rect key="frame" x="360" y="1" width="40" height="26"/>
+                        <rect key="frame" x="341" y="24" width="40" height="20.333333333333329"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="40" id="eXx-RA-gHT"/>
+                            <constraint firstAttribute="width" constant="40" id="8of-kK-vHh"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
@@ -33,15 +33,14 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="Rlq-DR-lD4" secondAttribute="trailing" constant="1" id="3Og-Qb-7om"/>
                     <constraint firstItem="ODD-KZ-8pN" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="9T3-Wt-hs4"/>
-                    <constraint firstItem="ODD-KZ-8pN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="55" id="G9c-1d-kzk"/>
+                    <constraint firstItem="ODD-KZ-8pN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="G9c-1d-kzk"/>
                     <constraint firstItem="ODD-KZ-8pN" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Jal-AX-rgX"/>
-                    <constraint firstAttribute="bottom" secondItem="Rlq-DR-lD4" secondAttribute="bottom" constant="95" id="XfG-eK-Qyk"/>
-                    <constraint firstAttribute="bottom" secondItem="ODD-KZ-8pN" secondAttribute="bottom" constant="10" id="cHa-ov-efj"/>
-                    <constraint firstItem="ODD-KZ-8pN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="fra-5j-lRU"/>
-                    <constraint firstItem="Rlq-DR-lD4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="1" id="niY-fH-Uc1"/>
-                    <constraint firstAttribute="trailing" secondItem="ODD-KZ-8pN" secondAttribute="trailing" constant="55" id="v7c-Bk-rZL"/>
+                    <constraint firstItem="Rlq-DR-lD4" firstAttribute="top" secondItem="ODD-KZ-8pN" secondAttribute="top" constant="9" id="c5M-gR-wSa"/>
+                    <constraint firstAttribute="bottom" secondItem="ODD-KZ-8pN" secondAttribute="bottom" constant="15" id="cHa-ov-efj"/>
+                    <constraint firstItem="ODD-KZ-8pN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="fra-5j-lRU"/>
+                    <constraint firstItem="Rlq-DR-lD4" firstAttribute="trailing" secondItem="ODD-KZ-8pN" secondAttribute="trailing" constant="-4" id="iiI-XL-vND"/>
+                    <constraint firstAttribute="trailing" secondItem="ODD-KZ-8pN" secondAttribute="trailing" constant="16" id="v7c-Bk-rZL"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

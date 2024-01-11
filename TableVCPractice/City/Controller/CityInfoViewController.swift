@@ -97,8 +97,7 @@ extension CityInfoViewController : UICollectionViewDelegate, UICollectionViewDat
         let sb = UIStoryboard(name: CityDetailViewController.stroyboard, bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: CityDetailViewController.identifier) as! CityDetailViewController
         
-        present(vc, animated: true)
-        
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 

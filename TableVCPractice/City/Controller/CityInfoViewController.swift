@@ -71,7 +71,6 @@ extension CityInfoViewController : UICollectionViewDelegate, UICollectionViewDat
 //        layout.minimumLineSpacing = 10
 //        layout.minimumInteritemSpacing = 5
         layout.scrollDirection = .vertical
-        
         return layout
     }
     

@@ -19,6 +19,7 @@ class CityDetailViewController: UIViewController {
         super.viewDidLoad()
 
         navigationItem.title = "도시 상세 정보"
+        navigationController?.navigationBar.tintColor = .black
         
         configureTableView()
     }
@@ -74,7 +75,30 @@ extension CityDetailViewController : UITableViewDelegate, UITableViewDataSource 
             
             return cell
         }
+        
     }
+    
+    //조건에 따른 다른 Story 띄우기
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let travel = cityDetail.travel[indexPath.row]
+        
+        if travel.ad {
+            let sb = UIStoryboard(name: ADViewController.storyboard, bundle: nil)
+            let vc = sb.instantiateViewController(withIdentifier: ADViewController.identifier) as! ADViewController
+            
+            let nav = UINavigationController(rootViewController: vc)
+            nav.modalPresentationStyle = .fullScreen
+            
+            present(nav, animated: true)
+        } else {
+            let sb = UIStoryboard(name: TravelViewController.storyboard, bundle: nil)
+            let vc = sb.instantiateViewController(withIdentifier: TravelViewController.identifier) as! TravelViewController
+            
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
     
     
 }

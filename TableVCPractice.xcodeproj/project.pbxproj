@@ -37,6 +37,10 @@
 		DBDDDE552B4D642100DBDB62 /* CityInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDDDE542B4D642100DBDB62 /* CityInfoCollectionViewCell.swift */; };
 		DBDDDE592B4D7B8600DBDB62 /* CityInfoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBDDDE572B4D7B8600DBDB62 /* CityInfoCollectionViewCell.xib */; };
 		DBDDDE5B2B4D828D00DBDB62 /* CityInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDDDE5A2B4D828D00DBDB62 /* CityInfoViewController.swift */; };
+		DBEF1D902B5030E4005E1293 /* Travel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBEF1D8F2B5030E4005E1293 /* Travel.storyboard */; };
+		DBEF1D922B5030EE005E1293 /* AD.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBEF1D912B5030EE005E1293 /* AD.storyboard */; };
+		DBEF1D942B5031B5005E1293 /* TravelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEF1D932B5031B5005E1293 /* TravelViewController.swift */; };
+		DBEF1D962B5031BF005E1293 /* ADViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEF1D952B5031BF005E1293 /* ADViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +74,10 @@
 		DBDDDE542B4D642100DBDB62 /* CityInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInfoCollectionViewCell.swift; sourceTree = "<group>"; };
 		DBDDDE572B4D7B8600DBDB62 /* CityInfoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityInfoCollectionViewCell.xib; sourceTree = "<group>"; };
 		DBDDDE5A2B4D828D00DBDB62 /* CityInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInfoViewController.swift; sourceTree = "<group>"; };
+		DBEF1D8F2B5030E4005E1293 /* Travel.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Travel.storyboard; sourceTree = "<group>"; };
+		DBEF1D912B5030EE005E1293 /* AD.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AD.storyboard; sourceTree = "<group>"; };
+		DBEF1D932B5031B5005E1293 /* TravelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelViewController.swift; sourceTree = "<group>"; };
+		DBEF1D952B5031BF005E1293 /* ADViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +225,8 @@
 			children = (
 				DB2AF7EB2B4A889700FFB834 /* City.storyboard */,
 				DB2148622B500636002E6BF7 /* CityDetail.storyboard */,
+				DBEF1D8F2B5030E4005E1293 /* Travel.storyboard */,
+				DBEF1D912B5030EE005E1293 /* AD.storyboard */,
 				DB21486C2B500740002E6BF7 /* TableCell */,
 			);
 			path = View;
@@ -227,6 +237,8 @@
 			children = (
 				DBDDDE5A2B4D828D00DBDB62 /* CityInfoViewController.swift */,
 				DB2148662B5006B0002E6BF7 /* CityDetailViewController.swift */,
+				DBEF1D932B5031B5005E1293 /* TravelViewController.swift */,
+				DBEF1D952B5031BF005E1293 /* ADViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -316,7 +328,9 @@
 				DB2148532B4FD2C8002E6BF7 /* Case.storyboard in Resources */,
 				DB2AF7ED2B4A889700FFB834 /* City.storyboard in Resources */,
 				DB2148552B4FD3A0002E6BF7 /* Magazine.storyboard in Resources */,
+				DBEF1D922B5030EE005E1293 /* AD.storyboard in Resources */,
 				DBDDDE592B4D7B8600DBDB62 /* CityInfoCollectionViewCell.xib in Resources */,
+				DBEF1D902B5030E4005E1293 /* Travel.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB2AF7E62B4A889700FFB834 /* AppDelegate.swift in Sources */,
+				DBEF1D962B5031BF005E1293 /* ADViewController.swift in Sources */,
 				DBDDDE172B4AC41E00DBDB62 /* Case3TableViewCell.swift in Sources */,
 				DBDDDE512B4D631600DBDB62 /* CityInfo.swift in Sources */,
 				DB8331F72B500F45009B2B7B /* Protocol + Extension.swift in Sources */,
@@ -335,6 +350,7 @@
 				DB2148672B5006B0002E6BF7 /* CityDetailViewController.swift in Sources */,
 				DBC335392B4E8B5500EBBEC9 /* Setting.swift in Sources */,
 				DBDDDE132B4ABF2000DBDB62 /* Case2TableViewController.swift in Sources */,
+				DBEF1D942B5031B5005E1293 /* TravelViewController.swift in Sources */,
 				DB21486A2B5006C7002E6BF7 /* CityDetailTableViewCell.swift in Sources */,
 				DB21485A2B4FD653002E6BF7 /* MagazineInfo.swift in Sources */,
 				DB8331FA2B501790009B2B7B /* ADTableViewCell.swift in Sources */,

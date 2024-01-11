@@ -43,6 +43,9 @@ extension CityDetailViewController : UITableViewDelegate, UITableViewDataSource 
         detailTableView.register(xib2, forCellReuseIdentifier: ADTableViewCell.identifier)
         
     }
+}
+
+extension CityDetailViewController {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let travel = cityDetail.travel[indexPath.row]
         
@@ -98,5 +101,23 @@ extension CityDetailViewController : UITableViewDelegate, UITableViewDataSource 
             
             navigationController?.pushViewController(vc, animated: true)
         }
+    }
+    
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let like = UIContextualAction(style: .normal, title: "Like") { (UIContextualAction, UIView, success: @escaping (Bool) -> Void) in
+            print("Like 클릭 됨")
+            success(true)
+        }
+        like.backgroundColor = .systemPink
+        
+        
+        let share = UIContextualAction(style: .normal, title: "Share") { (UIContextualAction, UIView, success: @escaping (Bool) -> Void) in
+            print("Share 클릭 됨")
+            success(true)
+        }
+        share.backgroundColor = .systemTeal
+        
+        //actions배열 인덱스 0이 왼쪽에 붙어서 나옴
+        return UISwipeActionsConfiguration(actions:[like, share])
     }
 }

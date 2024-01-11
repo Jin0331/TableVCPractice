@@ -19,12 +19,7 @@ class CityInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // collection View Cell Xib
-        cityCollectionView.dataSource = self
-        cityCollectionView.delegate = self
-        
-        let xib = UINib(nibName: CityInfoIdentifier.cellDesign1.rawValue, bundle: nil)
-        cityCollectionView.register(xib, forCellWithReuseIdentifier:  CityInfoIdentifier.cellDesign1.rawValue)
+        connectCollectionView()
         
         // layout
         cityCollectionView.collectionViewLayout = configureCellLayout()
@@ -51,7 +46,19 @@ class CityInfoViewController: UIViewController {
 
 }
 
+
+//MARK: - Extension
 extension CityInfoViewController : UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    // Collection View UI
+    func connectCollectionView() {
+        // collection View Cell Xib
+        cityCollectionView.dataSource = self
+        cityCollectionView.delegate = self
+        
+        let xib = UINib(nibName: CityInfoCollectionViewCell.identifier, bundle: nil)
+        cityCollectionView.register(xib, forCellWithReuseIdentifier:  CityInfoCollectionViewCell.identifier)
+    }
     
     func configureCellLayout () -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
@@ -68,6 +75,35 @@ extension CityInfoViewController : UICollectionViewDelegate, UICollectionViewDat
         return layout
     }
     
+    // Collection View 관련
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        return cityList.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = cityCollectionView.dequeueReusableCell(withReuseIdentifier: CityInfoCollectionViewCell.identifier, for: indexPath) as! CityInfoCollectionViewCell
+        
+        let items = cityList[indexPath.item]
+
+        cell.configureImageIntoCell(cell: items)
+
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let sb = UIStoryboard(name: CityDetailViewController.stroyboard, bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: CityDetailViewController.identifier) as! CityDetailViewController
+        
+        present(vc, animated: true)
+        
+    }
+}
+
+// String 처리 함수
+extension CityInfoViewController {
     func travleFiltering(arr : [City], segmentIndex sg : Int ) -> [City] {
         let temp = arr.map({ (item : City) -> City? in
             print(type(of: item.domestic_travel))
@@ -79,24 +115,6 @@ extension CityInfoViewController : UICollectionViewDelegate, UICollectionViewDat
                 return nil
             }
         })
-//        print(temp.compactMap{$0})
         return temp.compactMap{$0}
-    }
-    
-    //MARK: - Collection View 관련
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        return cityList.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        let cell = cityCollectionView.dequeueReusableCell(withReuseIdentifier: CityInfoIdentifier.cellDesign1.rawValue, for: indexPath) as! CityInfoCollectionViewCell
-        
-        let items = cityList[indexPath.item]
-
-        cell.configureImageIntoCell(cell: items)
-
-        return cell
     }
 }

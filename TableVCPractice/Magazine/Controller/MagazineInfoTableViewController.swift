@@ -12,6 +12,7 @@ class MagazineInfoTableViewController: UITableViewController {
     
     var magzineList = MagazineInfo()
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.separatorStyle = .none// 구분선 없애기

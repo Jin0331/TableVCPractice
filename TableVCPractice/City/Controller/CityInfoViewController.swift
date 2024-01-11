@@ -6,6 +6,7 @@
 // https://stackoverflow.com/questions/25289375/uisegmentedcontroller-switch-between-collectionview-tableview
 
 import UIKit
+import Kingfisher
 
 class CityInfoViewController: UIViewController {
     

@@ -13,11 +13,16 @@ class TravelChatMainMultiTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+}
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+extension TravelChatMainMultiTableViewCell : setTableViewCell {
+    static var identifier: String {
+        <#code#>
     }
+    
+    func setDesignTableCell() {
+        <#code#>
+    }
+    
     
 }

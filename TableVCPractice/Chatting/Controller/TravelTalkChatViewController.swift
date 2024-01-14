@@ -19,6 +19,7 @@ class TravelTalkChatViewController: UIViewController {
 
         configureDesign()
         configureUIView()
+        updateMessage()
     }
 
 }
@@ -89,3 +90,22 @@ extension TravelTalkChatViewController : UITableViewDelegate, UITableViewDataSou
     }
 }
 
+extension TravelTalkChatViewController {
+    //채팅 스크롤 아래로
+    func scrollLastOfTableView() {
+        // First figure out how many sections there are
+        let lastSectionIndex = chatTableView.numberOfSections - 1
+
+        // Then grab the number of rows in the last section
+        let lastRowInLastSection = chatTableView.numberOfRows(inSection: lastSectionIndex) - 1
+
+        let indexPath = IndexPath(row: lastRowInLastSection, section: lastSectionIndex)
+
+        chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+    }
+    
+    func updateMessage() {
+        chatTableView.reloadData()
+        scrollLastOfTableView()
+    }
+}

@@ -9,15 +9,42 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TravelChatReceiverTableViewCell" id="KGk-i7-Jjw" customClass="TravelChatReceiverTableViewCell" customModule="TableVCPractice" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TravelChatReceiverTableViewCell" rowHeight="65" id="KGk-i7-Jjw" customClass="TravelChatReceiverTableViewCell" customModule="TableVCPractice" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="482" height="65"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <rect key="frame" x="0.0" y="0.0" width="482" height="65"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="asdasdsadasdasdasdsadasdasdasdsadasdasdasdsadasdasdasdsadasdasdasdsadasd" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIr-N4-Xuo">
+                        <rect key="frame" x="62.333333333333343" y="8" width="411.66666666666663" height="40.666666666666664"/>
+                        <color key="backgroundColor" red="0.91764706370000004" green="0.91764706370000004" blue="0.91764706370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2i-bB-dv5">
+                        <rect key="frame" x="12.666666666666668" y="27.666666666666671" width="41.333333333333329" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="dIr-N4-Xuo" firstAttribute="leading" secondItem="N2i-bB-dv5" secondAttribute="trailing" constant="8.3300000000000001" id="7UU-gA-e7K"/>
+                    <constraint firstItem="N2i-bB-dv5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="GjV-rh-4xz"/>
+                    <constraint firstItem="N2i-bB-dv5" firstAttribute="bottom" secondItem="dIr-N4-Xuo" secondAttribute="bottom" id="OxL-PR-igX"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="dIr-N4-Xuo" secondAttribute="bottom" constant="5" id="RAk-9D-lSw"/>
+                    <constraint firstAttribute="trailing" secondItem="dIr-N4-Xuo" secondAttribute="trailing" constant="8" id="hwu-5a-3Xb"/>
+                    <constraint firstItem="dIr-N4-Xuo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="toq-fQ-VsJ"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="139" y="21"/>
+            <connections>
+                <outlet property="chatDate" destination="N2i-bB-dv5" id="qtH-If-MSx"/>
+                <outlet property="chatLabel" destination="dIr-N4-Xuo" id="jZU-wO-dcm"/>
+            </connections>
+            <point key="canvasLocation" x="262.59541984732823" y="26.408450704225352"/>
         </tableViewCell>
     </objects>
 </document>

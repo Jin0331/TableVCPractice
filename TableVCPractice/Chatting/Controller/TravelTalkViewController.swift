@@ -12,7 +12,7 @@ class TravelTalkViewController: UIViewController {
     //MARK: - IBOutlet, variable
     @IBOutlet var chatSearchBar: UIView!
     @IBOutlet var chatTableView: UITableView!
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,7 +37,8 @@ extension TravelTalkViewController:setUIView {
     }
     
     func configureDesign() {
-        navigationItem.title = "Travel Talk"
+        navigationItem.title = "TRAVEL TALK"
+        chatTableView.separatorStyle = .none
     }
     
     
@@ -46,6 +47,11 @@ extension TravelTalkViewController:setUIView {
 // table view 관련
 extension TravelTalkViewController : UITableViewDelegate, UITableViewDataSource {
         
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return 80
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return mockChatList.count
@@ -57,8 +63,6 @@ extension TravelTalkViewController : UITableViewDelegate, UITableViewDataSource 
         // 우선 개인 채팅방부터 하고. 추후 구현
         let userCell = tableView.dequeueReusableCell(withIdentifier: TravelChatMainTableViewCell.identifier, for: indexPath) as! TravelChatMainTableViewCell
         
-        print(mockChatList[indexPath.row])
-        
         userCell.setDesignTableCell(cell: mockChatList[indexPath.row])
         
         
@@ -67,8 +71,13 @@ extension TravelTalkViewController : UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        print(TravelTalkChatViewController.storyboard)
+        
         let sb = UIStoryboard(name: TravelTalkChatViewController.storyboard, bundle: nil)
-        let vc = sb.instantiateViewController(identifier: TravelTalkChatViewController.identifier)
+        let vc = sb.instantiateViewController(identifier: TravelTalkChatViewController.identifier) as! TravelTalkChatViewController
+        
+        // 데이터 전달
+        vc.storedData = mockChatList[indexPath.row]
         
         navigationController?.pushViewController(vc, animated: true)
     }

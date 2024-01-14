@@ -9,10 +9,16 @@ import UIKit
 
 class TravelTalkChatViewController: UIViewController {
 
+    @IBOutlet var chatTableView: UITableView!
+    @IBOutlet var searchTexeField: UITextField!
+    
+    var storedData : ChatRoom?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        configureDesign()
+        configureUIView()
     }
 
 }
@@ -22,25 +28,64 @@ extension TravelTalkChatViewController : setUIView {
     static var storyboard: String = "TravelTalkChat"
     
     func configureUIView() {
+        chatTableView.delegate = self
+        chatTableView.dataSource = self
+        
+        // sender
+        let xib1 = UINib(nibName: TravelChatSenderTableViewCell.identifier, bundle: nil)
+        chatTableView.register(xib1, forCellReuseIdentifier: TravelChatSenderTableViewCell.identifier)
+        
+        // receiver
+        let xib2 = UINib(nibName: TravelChatReceiverTableViewCell.identifier, bundle: nil)
+        chatTableView.register(xib2, forCellReuseIdentifier: TravelChatReceiverTableViewCell.identifier)
         
     }
     
     func configureDesign() {
         
+        if let item = storedData {
+            navigationItem.title = item.chatroomName
+            navigationController?.navigationBar.tintColor = .black
+            navigationController?.navigationBar.topItem?.title = " "
+        }
+        
+        // https://yeonduing.tistory.com/37
+        // label과 table cell의 크기를 동적으로 변경하기 위해선...이게 핵심이었다...... ㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠ
+        chatTableView.estimatedRowHeight = 30
+        chatTableView.rowHeight = UITableView.automaticDimension
+        chatTableView.separatorStyle = .none
     }
-    
-    
 }
 
 extension TravelTalkChatViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 100
+        if let item = storedData {
+            return item.chatList.count
+        } else {
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let chatCell = tableView.dequeueReusableCell(withIdentifier: TravelTalkChatViewController.identifier, for: indexPath)
+        let senderCell = tableView.dequeueReusableCell(withIdentifier: TravelChatSenderTableViewCell.identifier, for: indexPath) as! TravelChatSenderTableViewCell
         
-        return chatCell
+        let recieverCell = tableView.dequeueReusableCell(withIdentifier: TravelChatReceiverTableViewCell.identifier, for: indexPath) as! TravelChatReceiverTableViewCell
+        
+                
+        if let item = storedData {
+            if item.chatList[indexPath.row].user.profileImage != "user"{
+                senderCell.setDesignTableCell(cell: item.chatList[indexPath.row])
+                
+                return senderCell
+            } else {
+                recieverCell.setDesignTableCell(cell: item.chatList[indexPath.row])
+                
+                return recieverCell
+            }
+        } else {
+            return UITableViewCell() // 
+        }
     }
 }
+

@@ -29,20 +29,24 @@ extension TravelChatMainTableViewCell : setTableViewCell {
     func setDesignTableCell(cell : ChatRoom) {
         //image
         chatImage.image = UIImage(named: cell.chatroomImage[0])
-        chatImage.clipsToBounds = true
-        chatImage.layer.cornerRadius = self.chatImage.frame.width / 2
+        chatImage.contentMode = .scaleAspectFit
+        DispatchQueue.main.async {
+            self.chatImage.clipsToBounds = true
+            self.chatImage.layer.cornerRadius = self.chatImage.frame.width / 2
+        }
     
         // label
         chatNickname.text = cell.chatroomName
         chatNickname.font = .boldSystemFont(ofSize: 15)
         chatNickname.textAlignment = .left
         
-        chatLatestText.text = cell.chatList[0].message
+        chatLatestText.text = cell.chatList[cell.chatList.count-1].message
         chatLatestText.font = .boldSystemFont(ofSize: 13)
         chatLatestText.textColor = .lightGray
         chatLatestText.textAlignment = .left
-        
-        chatLatestDate.text = cell.chatList[0].date
+        chatLatestText.numberOfLines = 0
+
+        chatLatestDate.text = cell.chatList[cell.chatList.count-1].date
         chatLatestDate.font = .boldSystemFont(ofSize: 13)
         chatLatestDate.textColor = .lightGray
         chatLatestDate.textAlignment = .left

@@ -9,6 +9,11 @@ import UIKit
 
 class TravelChatSenderTableViewCell: UITableViewCell {
 
+    @IBOutlet var profileImageView: UIImageView!
+    @IBOutlet var nickNameLabel: UILabel!
+    @IBOutlet var chatLabel: UILabel!
+    @IBOutlet var chatDate: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,10 +25,32 @@ class TravelChatSenderTableViewCell: UITableViewCell {
 extension TravelChatSenderTableViewCell : setTableViewCell {
     
     static var identifier: String {
-        return "TravelChatReceiverTableViewCell"
+        return "TravelChatSenderTableViewCell"
     }
-    func setDesignTableCell(cell: ChatRoom) {
+    func setDesignTableCell(cell: Chat) {
+        // image
+        profileImageView.image = UIImage(named: cell.user.profileImage)
+        profileImageView.contentMode = .scaleAspectFit
+        DispatchQueue.main.async {
+            self.profileImageView.clipsToBounds = true
+            self.profileImageView.layer.cornerRadius = self.profileImageView.frame.width / 2
+        }
         
+        //label
+        nickNameLabel.text = cell.user.profileImage
+        nickNameLabel.font = .boldSystemFont(ofSize: 15)
+        nickNameLabel.textAlignment = .left
+        
+        chatLabel.text = cell.message
+        chatLabel.font = .systemFont(ofSize: 15)
+        chatLabel.layer.cornerRadius = 5
+        chatLabel.layer.borderColor = UIColor.lightGray.cgColor
+        chatLabel.layer.borderWidth = 0.7
+        
+        chatDate.text = cell.date
+        chatDate.font = .systemFont(ofSize: 10)
+        chatDate.textColor = .lightGray
+        chatDate.textAlignment = .left
     }
     
 

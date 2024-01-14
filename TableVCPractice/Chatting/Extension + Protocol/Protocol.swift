@@ -10,7 +10,7 @@ import Foundation
 // tableViewCell에서 identifier
 protocol setTableViewCell {
     static var identifier : String {get}
-    func setDesignTableCell (cell : ChatRoom)
+//    func setDesignTableCell (cell : ChatRoom)
 }
 
 // UIViewController

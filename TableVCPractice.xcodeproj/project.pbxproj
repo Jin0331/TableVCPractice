@@ -18,6 +18,10 @@
 		DB21486A2B5006C7002E6BF7 /* CityDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2148682B5006C7002E6BF7 /* CityDetailTableViewCell.swift */; };
 		DB21486B2B5006C7002E6BF7 /* CityDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB2148692B5006C7002E6BF7 /* CityDetailTableViewCell.xib */; };
 		DB21486F2B5008B4002E6BF7 /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = DB21486E2B5008B4002E6BF7 /* Cosmos */; };
+		DB22C10B2B542C210041BD65 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DB22C10A2B542C210041BD65 /* IQKeyboardManagerSwift */; };
+		DB22C10D2B542FEF0041BD65 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB22C10C2B542FEF0041BD65 /* Extension.swift */; };
+		DB22C1212B543D480041BD65 /* TravelChatMainTable4TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB22C11F2B543D480041BD65 /* TravelChatMainTable4TableViewCell.swift */; };
+		DB22C1222B543D480041BD65 /* TravelChatMainTable4TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB22C1202B543D480041BD65 /* TravelChatMainTable4TableViewCell.xib */; };
 		DB2AF7E62B4A889700FFB834 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2AF7E52B4A889700FFB834 /* AppDelegate.swift */; };
 		DB2AF7E82B4A889700FFB834 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2AF7E72B4A889700FFB834 /* SceneDelegate.swift */; };
 		DB2AF7ED2B4A889700FFB834 /* City.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB2AF7EB2B4A889700FFB834 /* City.storyboard */; };
@@ -41,6 +45,20 @@
 		DBEF1D922B5030EE005E1293 /* AD.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBEF1D912B5030EE005E1293 /* AD.storyboard */; };
 		DBEF1D942B5031B5005E1293 /* TravelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEF1D932B5031B5005E1293 /* TravelViewController.swift */; };
 		DBEF1D962B5031BF005E1293 /* ADViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEF1D952B5031BF005E1293 /* ADViewController.swift */; };
+		DBF8B7502B5128C000A650D2 /* ChattingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF8B74F2B5128C000A650D2 /* ChattingData.swift */; };
+		DBF8B7522B51293F00A650D2 /* TravelTalk.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBF8B7512B51293F00A650D2 /* TravelTalk.storyboard */; };
+		DBF8B7542B51294D00A650D2 /* TravelTalkChat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBF8B7532B51294D00A650D2 /* TravelTalkChat.storyboard */; };
+		DBF8B7562B51296A00A650D2 /* TravelTalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF8B7552B51296A00A650D2 /* TravelTalkViewController.swift */; };
+		DBF8B7582B51297800A650D2 /* TravelTalkChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF8B7572B51297800A650D2 /* TravelTalkChatViewController.swift */; };
+		DBF8B75B2B5129B400A650D2 /* TravelChatMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF8B7592B5129B400A650D2 /* TravelChatMainTableViewCell.swift */; };
+		DBF8B75C2B5129B400A650D2 /* TravelChatMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBF8B75A2B5129B400A650D2 /* TravelChatMainTableViewCell.xib */; };
+		DBF8B7602B512A1B00A650D2 /* TravelChatReceiverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF8B75E2B512A1B00A650D2 /* TravelChatReceiverTableViewCell.swift */; };
+		DBF8B7612B512A1B00A650D2 /* TravelChatReceiverTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBF8B75F2B512A1B00A650D2 /* TravelChatReceiverTableViewCell.xib */; };
+		DBF8B7642B512A2C00A650D2 /* TravelChatSenderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF8B7622B512A2C00A650D2 /* TravelChatSenderTableViewCell.swift */; };
+		DBF8B7652B512A2C00A650D2 /* TravelChatSenderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBF8B7632B512A2C00A650D2 /* TravelChatSenderTableViewCell.xib */; };
+		DBF8B7682B512A5900A650D2 /* TravelChatMainMultiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF8B7662B512A5900A650D2 /* TravelChatMainMultiTableViewCell.swift */; };
+		DBF8B7692B512A5900A650D2 /* TravelChatMainMultiTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBF8B7672B512A5900A650D2 /* TravelChatMainMultiTableViewCell.xib */; };
+		DBF8B76C2B512D8400A650D2 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF8B76B2B512D8400A650D2 /* Protocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +71,9 @@
 		DB2148662B5006B0002E6BF7 /* CityDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailViewController.swift; sourceTree = "<group>"; };
 		DB2148682B5006C7002E6BF7 /* CityDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailTableViewCell.swift; sourceTree = "<group>"; };
 		DB2148692B5006C7002E6BF7 /* CityDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityDetailTableViewCell.xib; sourceTree = "<group>"; };
+		DB22C10C2B542FEF0041BD65 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		DB22C11F2B543D480041BD65 /* TravelChatMainTable4TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelChatMainTable4TableViewCell.swift; sourceTree = "<group>"; };
+		DB22C1202B543D480041BD65 /* TravelChatMainTable4TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TravelChatMainTable4TableViewCell.xib; sourceTree = "<group>"; };
 		DB2AF7E22B4A889700FFB834 /* TableVCPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableVCPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB2AF7E52B4A889700FFB834 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB2AF7E72B4A889700FFB834 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +99,20 @@
 		DBEF1D912B5030EE005E1293 /* AD.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AD.storyboard; sourceTree = "<group>"; };
 		DBEF1D932B5031B5005E1293 /* TravelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelViewController.swift; sourceTree = "<group>"; };
 		DBEF1D952B5031BF005E1293 /* ADViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADViewController.swift; sourceTree = "<group>"; };
+		DBF8B74F2B5128C000A650D2 /* ChattingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChattingData.swift; sourceTree = "<group>"; };
+		DBF8B7512B51293F00A650D2 /* TravelTalk.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TravelTalk.storyboard; sourceTree = "<group>"; };
+		DBF8B7532B51294D00A650D2 /* TravelTalkChat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TravelTalkChat.storyboard; sourceTree = "<group>"; };
+		DBF8B7552B51296A00A650D2 /* TravelTalkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTalkViewController.swift; sourceTree = "<group>"; };
+		DBF8B7572B51297800A650D2 /* TravelTalkChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTalkChatViewController.swift; sourceTree = "<group>"; };
+		DBF8B7592B5129B400A650D2 /* TravelChatMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelChatMainTableViewCell.swift; sourceTree = "<group>"; };
+		DBF8B75A2B5129B400A650D2 /* TravelChatMainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TravelChatMainTableViewCell.xib; sourceTree = "<group>"; };
+		DBF8B75E2B512A1B00A650D2 /* TravelChatReceiverTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelChatReceiverTableViewCell.swift; sourceTree = "<group>"; };
+		DBF8B75F2B512A1B00A650D2 /* TravelChatReceiverTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TravelChatReceiverTableViewCell.xib; sourceTree = "<group>"; };
+		DBF8B7622B512A2C00A650D2 /* TravelChatSenderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelChatSenderTableViewCell.swift; sourceTree = "<group>"; };
+		DBF8B7632B512A2C00A650D2 /* TravelChatSenderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TravelChatSenderTableViewCell.xib; sourceTree = "<group>"; };
+		DBF8B7662B512A5900A650D2 /* TravelChatMainMultiTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelChatMainMultiTableViewCell.swift; sourceTree = "<group>"; };
+		DBF8B7672B512A5900A650D2 /* TravelChatMainMultiTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TravelChatMainMultiTableViewCell.xib; sourceTree = "<group>"; };
+		DBF8B76B2B512D8400A650D2 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +122,7 @@
 			files = (
 				DB21486F2B5008B4002E6BF7 /* Cosmos in Frameworks */,
 				DB2148592B4FD5E5002E6BF7 /* Kingfisher in Frameworks */,
+				DB22C10B2B542C210041BD65 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +224,17 @@
 			path = TableCell;
 			sourceTree = "<group>";
 		};
+		DB22C10E2B543C3E0041BD65 /* multiChat */ = {
+			isa = PBXGroup;
+			children = (
+				DBF8B7592B5129B400A650D2 /* TravelChatMainTableViewCell.swift */,
+				DBF8B75A2B5129B400A650D2 /* TravelChatMainTableViewCell.xib */,
+				DB22C11F2B543D480041BD65 /* TravelChatMainTable4TableViewCell.swift */,
+				DB22C1202B543D480041BD65 /* TravelChatMainTable4TableViewCell.xib */,
+			);
+			path = multiChat;
+			sourceTree = "<group>";
+		};
 		DB2AF7D92B4A889700FFB834 = {
 			isa = PBXGroup;
 			children = (
@@ -207,6 +254,7 @@
 		DB2AF7E42B4A889700FFB834 /* TableVCPractice */ = {
 			isa = PBXGroup;
 			children = (
+				DBF8B74B2B51289F00A650D2 /* Chatting */,
 				DB21484C2B4FD04E002E6BF7 /* Case */,
 				DB21484B2B4FD040002E6BF7 /* Magazine */,
 				DB21484A2B4FD010002E6BF7 /* City */,
@@ -253,6 +301,67 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		DBF8B74B2B51289F00A650D2 /* Chatting */ = {
+			isa = PBXGroup;
+			children = (
+				DBF8B76A2B512D7300A650D2 /* Extension + Protocol */,
+				DBF8B74E2B5128AE00A650D2 /* Controller */,
+				DBF8B74D2B5128AB00A650D2 /* Model */,
+				DBF8B74C2B5128A600A650D2 /* View */,
+			);
+			path = Chatting;
+			sourceTree = "<group>";
+		};
+		DBF8B74C2B5128A600A650D2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DBF8B75D2B5129BB00A650D2 /* TableCell */,
+				DBF8B7512B51293F00A650D2 /* TravelTalk.storyboard */,
+				DBF8B7532B51294D00A650D2 /* TravelTalkChat.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DBF8B74D2B5128AB00A650D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DBF8B74F2B5128C000A650D2 /* ChattingData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DBF8B74E2B5128AE00A650D2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DBF8B7552B51296A00A650D2 /* TravelTalkViewController.swift */,
+				DBF8B7572B51297800A650D2 /* TravelTalkChatViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DBF8B75D2B5129BB00A650D2 /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				DB22C10E2B543C3E0041BD65 /* multiChat */,
+				DBF8B75E2B512A1B00A650D2 /* TravelChatReceiverTableViewCell.swift */,
+				DBF8B75F2B512A1B00A650D2 /* TravelChatReceiverTableViewCell.xib */,
+				DBF8B7622B512A2C00A650D2 /* TravelChatSenderTableViewCell.swift */,
+				DBF8B7632B512A2C00A650D2 /* TravelChatSenderTableViewCell.xib */,
+				DBF8B7662B512A5900A650D2 /* TravelChatMainMultiTableViewCell.swift */,
+				DBF8B7672B512A5900A650D2 /* TravelChatMainMultiTableViewCell.xib */,
+			);
+			path = TableCell;
+			sourceTree = "<group>";
+		};
+		DBF8B76A2B512D7300A650D2 /* Extension + Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				DBF8B76B2B512D8400A650D2 /* Protocol.swift */,
+				DB22C10C2B542FEF0041BD65 /* Extension.swift */,
+			);
+			path = "Extension + Protocol";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -272,6 +381,7 @@
 			packageProductDependencies = (
 				DB2148582B4FD5E5002E6BF7 /* Kingfisher */,
 				DB21486E2B5008B4002E6BF7 /* Cosmos */,
+				DB22C10A2B542C210041BD65 /* IQKeyboardManagerSwift */,
 			);
 			productName = TableVCPractice;
 			productReference = DB2AF7E22B4A889700FFB834 /* TableVCPractice.app */;
@@ -304,6 +414,7 @@
 			packageReferences = (
 				DB2148572B4FD5E5002E6BF7 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				DB21486D2B5008B3002E6BF7 /* XCRemoteSwiftPackageReference "Cosmos" */,
+				DB22C1092B542C210041BD65 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = DB2AF7E32B4A889700FFB834 /* Products */;
 			projectDirPath = "";
@@ -319,13 +430,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBF8B7522B51293F00A650D2 /* TravelTalk.storyboard in Resources */,
+				DB22C1222B543D480041BD65 /* TravelChatMainTable4TableViewCell.xib in Resources */,
 				DB21486B2B5006C7002E6BF7 /* CityDetailTableViewCell.xib in Resources */,
 				DB2148632B500636002E6BF7 /* CityDetail.storyboard in Resources */,
 				DB21485F2B4FD748002E6BF7 /* Main.storyboard in Resources */,
+				DBF8B7692B512A5900A650D2 /* TravelChatMainMultiTableViewCell.xib in Resources */,
 				DB2AF7F22B4A889800FFB834 /* LaunchScreen.storyboard in Resources */,
 				DB8331FB2B501790009B2B7B /* ADTableViewCell.xib in Resources */,
 				DB2AF7EF2B4A889800FFB834 /* Assets.xcassets in Resources */,
+				DBF8B75C2B5129B400A650D2 /* TravelChatMainTableViewCell.xib in Resources */,
 				DB2148532B4FD2C8002E6BF7 /* Case.storyboard in Resources */,
+				DBF8B7542B51294D00A650D2 /* TravelTalkChat.storyboard in Resources */,
+				DBF8B7652B512A2C00A650D2 /* TravelChatSenderTableViewCell.xib in Resources */,
+				DBF8B7612B512A1B00A650D2 /* TravelChatReceiverTableViewCell.xib in Resources */,
 				DB2AF7ED2B4A889700FFB834 /* City.storyboard in Resources */,
 				DB2148552B4FD3A0002E6BF7 /* Magazine.storyboard in Resources */,
 				DBEF1D922B5030EE005E1293 /* AD.storyboard in Resources */,
@@ -341,25 +459,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBF8B7682B512A5900A650D2 /* TravelChatMainMultiTableViewCell.swift in Sources */,
 				DB2AF7E62B4A889700FFB834 /* AppDelegate.swift in Sources */,
 				DBEF1D962B5031BF005E1293 /* ADViewController.swift in Sources */,
+				DBF8B7562B51296A00A650D2 /* TravelTalkViewController.swift in Sources */,
 				DBDDDE172B4AC41E00DBDB62 /* Case3TableViewCell.swift in Sources */,
 				DBDDDE512B4D631600DBDB62 /* CityInfo.swift in Sources */,
 				DB8331F72B500F45009B2B7B /* Protocol + Extension.swift in Sources */,
+				DBF8B75B2B5129B400A650D2 /* TravelChatMainTableViewCell.swift in Sources */,
 				DB2AF7E82B4A889700FFB834 /* SceneDelegate.swift in Sources */,
+				DBF8B76C2B512D8400A650D2 /* Protocol.swift in Sources */,
 				DB2148672B5006B0002E6BF7 /* CityDetailViewController.swift in Sources */,
 				DBC335392B4E8B5500EBBEC9 /* Setting.swift in Sources */,
+				DBF8B7602B512A1B00A650D2 /* TravelChatReceiverTableViewCell.swift in Sources */,
 				DBDDDE132B4ABF2000DBDB62 /* Case2TableViewController.swift in Sources */,
 				DBEF1D942B5031B5005E1293 /* TravelViewController.swift in Sources */,
+				DBF8B7502B5128C000A650D2 /* ChattingData.swift in Sources */,
+				DB22C1212B543D480041BD65 /* TravelChatMainTable4TableViewCell.swift in Sources */,
 				DB21486A2B5006C7002E6BF7 /* CityDetailTableViewCell.swift in Sources */,
 				DB21485A2B4FD653002E6BF7 /* MagazineInfo.swift in Sources */,
 				DB8331FA2B501790009B2B7B /* ADTableViewCell.swift in Sources */,
 				DB2148612B50058D002E6BF7 /* TravelModel.swift in Sources */,
+				DBF8B7642B512A2C00A650D2 /* TravelChatSenderTableViewCell.swift in Sources */,
 				DBDDDE302B4C109300DBDB62 /* Shoping.swift in Sources */,
 				DBDDDE372B4C289F00DBDB62 /* MagazineInfoTableViewCell.swift in Sources */,
 				DBDDDE152B4AC36E00DBDB62 /* Case3TableViewController.swift in Sources */,
 				DBDDDE352B4C287200DBDB62 /* MagazineInfoTableViewController.swift in Sources */,
 				DBDDDE5B2B4D828D00DBDB62 /* CityInfoViewController.swift in Sources */,
+				DBF8B7582B51297800A650D2 /* TravelTalkChatViewController.swift in Sources */,
+				DB22C10D2B542FEF0041BD65 /* Extension.swift in Sources */,
 				DBDDDE552B4D642100DBDB62 /* CityInfoCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -517,7 +645,7 @@
 				INFOPLIST_FILE = TableVCPractice/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = City;
+				INFOPLIST_KEY_UIMainStoryboardFile = TravelTalk;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -548,7 +676,7 @@
 				INFOPLIST_FILE = TableVCPractice/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = City;
+				INFOPLIST_KEY_UIMainStoryboardFile = TravelTalk;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -607,6 +735,14 @@
 				minimumVersion = 24.0.0;
 			};
 		};
+		DB22C1092B542C210041BD65 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -619,6 +755,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DB21486D2B5008B3002E6BF7 /* XCRemoteSwiftPackageReference "Cosmos" */;
 			productName = Cosmos;
+		};
+		DB22C10A2B542C210041BD65 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB22C1092B542C210041BD65 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -18,13 +18,13 @@ class TravelChatSenderTableViewCell: UITableViewCell {
 }
 
 extension TravelChatSenderTableViewCell : setTableViewCell {
+    
     static var identifier: String {
-        <#code#>
+        return "TravelChatReceiverTableViewCell"
+    }
+    func setDesignTableCell(cell: ChatRoom) {
+        
     }
     
-    func setDesignTableCell() {
-        <#code#>
-    }
-    
-    
+
 }

@@ -16,13 +16,13 @@ class TravelChatMainMultiTableViewCell: UITableViewCell {
 }
 
 extension TravelChatMainMultiTableViewCell : setTableViewCell {
+    
     static var identifier: String {
-        <#code#>
+        return "TravelChatMainMultiTableViewCell"
     }
     
-    func setDesignTableCell() {
-        <#code#>
-    }
+func setDesignTableCell(cell: ChatRoom) {
     
+    }
     
 }

@@ -9,19 +9,44 @@ import UIKit
 
 class TravelChatMainTableViewCell: UITableViewCell {
     
+    @IBOutlet var chatImage: UIImageView!
+    @IBOutlet var chatNickname: UILabel!
+    @IBOutlet var chatLatestText: UILabel!
+    @IBOutlet var chatLatestDate: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
 }
 
 extension TravelChatMainTableViewCell : setTableViewCell {
+    
     static var identifier: String {
-        <#code#>
+        return "TravelChatMainTableViewCell"
     }
     
-    func setDesignTableCell() {
-        <#code#>
+    func setDesignTableCell(cell : ChatRoom) {
+        //image
+        chatImage.image = UIImage(named: cell.chatroomImage[0])
+        chatImage.clipsToBounds = true
+        chatImage.layer.cornerRadius = self.chatImage.frame.width / 2
+    
+        // label
+        chatNickname.text = cell.chatroomName
+        chatNickname.font = .boldSystemFont(ofSize: 15)
+        chatNickname.textAlignment = .left
+        
+        chatLatestText.text = cell.chatList[0].message
+        chatLatestText.font = .boldSystemFont(ofSize: 13)
+        chatLatestText.textColor = .lightGray
+        chatLatestText.textAlignment = .left
+        
+        chatLatestDate.text = cell.chatList[0].date
+        chatLatestDate.font = .boldSystemFont(ofSize: 13)
+        chatLatestDate.textColor = .lightGray
+        chatLatestDate.textAlignment = .left
+        
     }
     
     

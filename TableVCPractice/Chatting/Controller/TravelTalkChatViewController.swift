@@ -18,20 +18,15 @@ class TravelTalkChatViewController: UIViewController {
 }
 
 extension TravelTalkChatViewController : setUIView {
-    static var identifier: String {
-        <#code#>
-    }
-    
-    static var storyboard: String {
-        <#code#>
-    }
+    static var identifier: String = "TravelTalkChat"
+    static var storyboard: String = "TravelTalkChat"
     
     func configureUIView() {
-        <#code#>
+        
     }
     
     func configureDesign() {
-        <#code#>
+        
     }
     
     
@@ -39,12 +34,13 @@ extension TravelTalkChatViewController : setUIView {
 
 extension TravelTalkChatViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return 100
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        
+        let chatCell = tableView.dequeueReusableCell(withIdentifier: TravelTalkChatViewController.identifier, for: indexPath)
+        
+        return chatCell
     }
-    
-    
 }

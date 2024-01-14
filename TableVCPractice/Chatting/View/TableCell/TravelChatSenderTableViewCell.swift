@@ -38,17 +38,17 @@ extension TravelChatSenderTableViewCell : setTableViewCell {
         
         //label
         nickNameLabel.text = cell.user.profileImage
-        nickNameLabel.font = .boldSystemFont(ofSize: 15)
+        nickNameLabel.font = .boldSystemFont(ofSize: 17)
         nickNameLabel.textAlignment = .left
         
         chatLabel.text = cell.message
-        chatLabel.font = .systemFont(ofSize: 15)
+        chatLabel.font = .systemFont(ofSize: 17)
         chatLabel.layer.cornerRadius = 5
         chatLabel.layer.borderColor = UIColor.lightGray.cgColor
         chatLabel.layer.borderWidth = 0.7
         
-        chatDate.text = cell.date
-        chatDate.font = .systemFont(ofSize: 10)
+        chatDate.text = DateConvert(dateStr: cell.date, index: dateSelector.chat.index)
+        chatDate.font = .systemFont(ofSize: 12)
         chatDate.textColor = .lightGray
         chatDate.textAlignment = .left
     }

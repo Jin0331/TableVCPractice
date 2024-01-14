@@ -216,3 +216,36 @@ let mockChatList: [ChatRoom] = [
              ]
             ),
 ]
+
+enum dateSelector : String {
+    case main = "main"
+    case chat = "chat"
+    
+    var index: String {
+        switch self {
+        default :
+            return rawValue
+        }
+    }
+}
+
+func DateConvert(dateStr : String, index : String) -> String? {
+    let dateStr = "2024-01-11 09:30"
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+    let convertDate = dateFormatter.date(from: dateStr)
+    let myDateFormatter = DateFormatter()
+    
+    if index == "chat" {
+        myDateFormatter.dateFormat = "hh:mm a"
+        myDateFormatter.locale = Locale(identifier:"ko_KR")
+        
+        return myDateFormatter.string(from: convertDate!)
+    } else if index == "main" {
+        myDateFormatter.dateFormat = "yy.MM.dd"
+        
+        return myDateFormatter.string(from: convertDate!)
+    } else {
+        return nil
+    }
+}

@@ -10,7 +10,7 @@ import UIKit
 class TravelTalkChatViewController: UIViewController {
 
     @IBOutlet var chatTableView: UITableView!
-    @IBOutlet var searchTexeField: UITextField!
+    @IBOutlet var searchTextView: UITextView!
     
     var storedData : ChatRoom?
     
@@ -55,6 +55,15 @@ extension TravelTalkChatViewController : setUIView {
         chatTableView.estimatedRowHeight = 30
         chatTableView.rowHeight = UITableView.automaticDimension
         chatTableView.separatorStyle = .none
+        
+        // textView
+        searchTextView.text = "메세지를 입력하세요"
+        searchTextView.textColor = .lightGray
+        searchTextView.layer.borderWidth = 1
+        searchTextView.layer.borderColor = UIColor.lightGray.cgColor
+        searchTextView.layer.cornerRadius = 10
+        searchTextView.centerVertically()
+        
     }
 }
 
@@ -107,5 +116,22 @@ extension TravelTalkChatViewController {
     func updateMessage() {
         chatTableView.reloadData()
         scrollLastOfTableView()
+    }
+}
+
+extension TravelTalkChatViewController : UITextViewDelegate {
+    // 메세지가 시작될 때, 텍스트 날림
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.text == searchTextView.text {
+            textView.text = nil
+            textView.textColor = .black
+        }
+    }
+    // 끝나면
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = "메세지를 입력하세요"
+            textView.textColor = UIColor.lightGray
+        }
     }
 }

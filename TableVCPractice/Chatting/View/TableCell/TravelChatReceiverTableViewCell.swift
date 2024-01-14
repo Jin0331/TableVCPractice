@@ -28,13 +28,13 @@ extension TravelChatReceiverTableViewCell : setTableViewCell {
     func setDesignTableCell(cell: Chat) {
         
         chatLabel.text = cell.message
-        chatLabel.font = .systemFont(ofSize: 15)
+        chatLabel.font = .systemFont(ofSize: 17)
         chatLabel.layer.cornerRadius = 10
         chatLabel.layer.borderWidth = 1
         chatLabel.layer.borderColor = UIColor.lightGray.cgColor
         
-        chatDate.text = cell.date
-        chatDate.font = .systemFont(ofSize: 10)
+        chatDate.text = DateConvert(dateStr: cell.date, index: dateSelector.chat.index)
+        chatDate.font = .systemFont(ofSize: 12)
         chatDate.textColor = .lightGray
         chatDate.textAlignment = .left
     }

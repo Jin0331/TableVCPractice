@@ -46,7 +46,8 @@ extension TravelChatMainTableViewCell : setTableViewCell {
         chatLatestText.textAlignment = .left
         chatLatestText.numberOfLines = 0
 
-        chatLatestDate.text = cell.chatList[cell.chatList.count-1].date
+        
+        chatLatestDate.text = DateConvert(dateStr: cell.chatList[cell.chatList.count-1].date, index:dateSelector.main.index)!
         chatLatestDate.font = .boldSystemFont(ofSize: 13)
         chatLatestDate.textColor = .lightGray
         chatLatestDate.textAlignment = .left

@@ -30,13 +30,13 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="으아아아아!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yhj-ug-1ej">
-                        <rect key="frame" x="59" y="48" width="346" height="20.333333333333329"/>
+                        <rect key="frame" x="59" y="48" width="319" height="20"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="asd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isa-yf-Jb9">
-                        <rect key="frame" x="413" y="47" width="79" height="21"/>
+                        <rect key="frame" x="386" y="47" width="106" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -44,7 +44,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="sil-VD-vS5" firstAttribute="top" secondItem="p7Y-uM-4fH" secondAttribute="top" constant="6" id="Am1-mn-zR6"/>
-                    <constraint firstAttribute="trailing" secondItem="Yhj-ug-1ej" secondAttribute="trailing" constant="95" id="CKn-aS-dOO"/>
+                    <constraint firstAttribute="trailing" secondItem="Yhj-ug-1ej" secondAttribute="trailing" constant="122" id="CKn-aS-dOO"/>
                     <constraint firstItem="sil-VD-vS5" firstAttribute="leading" secondItem="p7Y-uM-4fH" secondAttribute="trailing" constant="15" id="G4g-xU-cpr"/>
                     <constraint firstItem="Yhj-ug-1ej" firstAttribute="top" secondItem="sil-VD-vS5" secondAttribute="bottom" constant="5" id="KLQ-Sf-uLS"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Yhj-ug-1ej" secondAttribute="bottom" constant="5" id="Tt6-4I-IGK"/>

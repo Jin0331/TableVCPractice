@@ -18,6 +18,8 @@
 		DB21486A2B5006C7002E6BF7 /* CityDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2148682B5006C7002E6BF7 /* CityDetailTableViewCell.swift */; };
 		DB21486B2B5006C7002E6BF7 /* CityDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB2148692B5006C7002E6BF7 /* CityDetailTableViewCell.xib */; };
 		DB21486F2B5008B4002E6BF7 /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = DB21486E2B5008B4002E6BF7 /* Cosmos */; };
+		DB22C10B2B542C210041BD65 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DB22C10A2B542C210041BD65 /* IQKeyboardManagerSwift */; };
+		DB22C10D2B542FEF0041BD65 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB22C10C2B542FEF0041BD65 /* Extension.swift */; };
 		DB2AF7E62B4A889700FFB834 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2AF7E52B4A889700FFB834 /* AppDelegate.swift */; };
 		DB2AF7E82B4A889700FFB834 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2AF7E72B4A889700FFB834 /* SceneDelegate.swift */; };
 		DB2AF7ED2B4A889700FFB834 /* City.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB2AF7EB2B4A889700FFB834 /* City.storyboard */; };
@@ -67,6 +69,7 @@
 		DB2148662B5006B0002E6BF7 /* CityDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailViewController.swift; sourceTree = "<group>"; };
 		DB2148682B5006C7002E6BF7 /* CityDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailTableViewCell.swift; sourceTree = "<group>"; };
 		DB2148692B5006C7002E6BF7 /* CityDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityDetailTableViewCell.xib; sourceTree = "<group>"; };
+		DB22C10C2B542FEF0041BD65 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		DB2AF7E22B4A889700FFB834 /* TableVCPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableVCPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB2AF7E52B4A889700FFB834 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB2AF7E72B4A889700FFB834 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +118,7 @@
 			files = (
 				DB21486F2B5008B4002E6BF7 /* Cosmos in Frameworks */,
 				DB2148592B4FD5E5002E6BF7 /* Kingfisher in Frameworks */,
+				DB22C10B2B542C210041BD65 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +343,7 @@
 			isa = PBXGroup;
 			children = (
 				DBF8B76B2B512D8400A650D2 /* Protocol.swift */,
+				DB22C10C2B542FEF0041BD65 /* Extension.swift */,
 			);
 			path = "Extension + Protocol";
 			sourceTree = "<group>";
@@ -362,6 +367,7 @@
 			packageProductDependencies = (
 				DB2148582B4FD5E5002E6BF7 /* Kingfisher */,
 				DB21486E2B5008B4002E6BF7 /* Cosmos */,
+				DB22C10A2B542C210041BD65 /* IQKeyboardManagerSwift */,
 			);
 			productName = TableVCPractice;
 			productReference = DB2AF7E22B4A889700FFB834 /* TableVCPractice.app */;
@@ -394,6 +400,7 @@
 			packageReferences = (
 				DB2148572B4FD5E5002E6BF7 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				DB21486D2B5008B3002E6BF7 /* XCRemoteSwiftPackageReference "Cosmos" */,
+				DB22C1092B542C210041BD65 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = DB2AF7E32B4A889700FFB834 /* Products */;
 			projectDirPath = "";
@@ -464,6 +471,7 @@
 				DBDDDE352B4C287200DBDB62 /* MagazineInfoTableViewController.swift in Sources */,
 				DBDDDE5B2B4D828D00DBDB62 /* CityInfoViewController.swift in Sources */,
 				DBF8B7582B51297800A650D2 /* TravelTalkChatViewController.swift in Sources */,
+				DB22C10D2B542FEF0041BD65 /* Extension.swift in Sources */,
 				DBDDDE552B4D642100DBDB62 /* CityInfoCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -711,6 +719,14 @@
 				minimumVersion = 24.0.0;
 			};
 		};
+		DB22C1092B542C210041BD65 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -723,6 +739,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DB21486D2B5008B3002E6BF7 /* XCRemoteSwiftPackageReference "Cosmos" */;
 			productName = Cosmos;
+		};
+		DB22C10A2B542C210041BD65 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB22C1092B542C210041BD65 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

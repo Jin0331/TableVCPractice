@@ -20,6 +20,8 @@
 		DB21486F2B5008B4002E6BF7 /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = DB21486E2B5008B4002E6BF7 /* Cosmos */; };
 		DB22C10B2B542C210041BD65 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DB22C10A2B542C210041BD65 /* IQKeyboardManagerSwift */; };
 		DB22C10D2B542FEF0041BD65 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB22C10C2B542FEF0041BD65 /* Extension.swift */; };
+		DB22C1212B543D480041BD65 /* TravelChatMainTable4TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB22C11F2B543D480041BD65 /* TravelChatMainTable4TableViewCell.swift */; };
+		DB22C1222B543D480041BD65 /* TravelChatMainTable4TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB22C1202B543D480041BD65 /* TravelChatMainTable4TableViewCell.xib */; };
 		DB2AF7E62B4A889700FFB834 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2AF7E52B4A889700FFB834 /* AppDelegate.swift */; };
 		DB2AF7E82B4A889700FFB834 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2AF7E72B4A889700FFB834 /* SceneDelegate.swift */; };
 		DB2AF7ED2B4A889700FFB834 /* City.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB2AF7EB2B4A889700FFB834 /* City.storyboard */; };
@@ -70,6 +72,8 @@
 		DB2148682B5006C7002E6BF7 /* CityDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailTableViewCell.swift; sourceTree = "<group>"; };
 		DB2148692B5006C7002E6BF7 /* CityDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityDetailTableViewCell.xib; sourceTree = "<group>"; };
 		DB22C10C2B542FEF0041BD65 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		DB22C11F2B543D480041BD65 /* TravelChatMainTable4TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelChatMainTable4TableViewCell.swift; sourceTree = "<group>"; };
+		DB22C1202B543D480041BD65 /* TravelChatMainTable4TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TravelChatMainTable4TableViewCell.xib; sourceTree = "<group>"; };
 		DB2AF7E22B4A889700FFB834 /* TableVCPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableVCPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB2AF7E52B4A889700FFB834 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB2AF7E72B4A889700FFB834 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -220,6 +224,17 @@
 			path = TableCell;
 			sourceTree = "<group>";
 		};
+		DB22C10E2B543C3E0041BD65 /* multiChat */ = {
+			isa = PBXGroup;
+			children = (
+				DBF8B7592B5129B400A650D2 /* TravelChatMainTableViewCell.swift */,
+				DBF8B75A2B5129B400A650D2 /* TravelChatMainTableViewCell.xib */,
+				DB22C11F2B543D480041BD65 /* TravelChatMainTable4TableViewCell.swift */,
+				DB22C1202B543D480041BD65 /* TravelChatMainTable4TableViewCell.xib */,
+			);
+			path = multiChat;
+			sourceTree = "<group>";
+		};
 		DB2AF7D92B4A889700FFB834 = {
 			isa = PBXGroup;
 			children = (
@@ -327,8 +342,7 @@
 		DBF8B75D2B5129BB00A650D2 /* TableCell */ = {
 			isa = PBXGroup;
 			children = (
-				DBF8B7592B5129B400A650D2 /* TravelChatMainTableViewCell.swift */,
-				DBF8B75A2B5129B400A650D2 /* TravelChatMainTableViewCell.xib */,
+				DB22C10E2B543C3E0041BD65 /* multiChat */,
 				DBF8B75E2B512A1B00A650D2 /* TravelChatReceiverTableViewCell.swift */,
 				DBF8B75F2B512A1B00A650D2 /* TravelChatReceiverTableViewCell.xib */,
 				DBF8B7622B512A2C00A650D2 /* TravelChatSenderTableViewCell.swift */,
@@ -417,6 +431,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBF8B7522B51293F00A650D2 /* TravelTalk.storyboard in Resources */,
+				DB22C1222B543D480041BD65 /* TravelChatMainTable4TableViewCell.xib in Resources */,
 				DB21486B2B5006C7002E6BF7 /* CityDetailTableViewCell.xib in Resources */,
 				DB2148632B500636002E6BF7 /* CityDetail.storyboard in Resources */,
 				DB21485F2B4FD748002E6BF7 /* Main.storyboard in Resources */,
@@ -460,6 +475,7 @@
 				DBDDDE132B4ABF2000DBDB62 /* Case2TableViewController.swift in Sources */,
 				DBEF1D942B5031B5005E1293 /* TravelViewController.swift in Sources */,
 				DBF8B7502B5128C000A650D2 /* ChattingData.swift in Sources */,
+				DB22C1212B543D480041BD65 /* TravelChatMainTable4TableViewCell.swift in Sources */,
 				DB21486A2B5006C7002E6BF7 /* CityDetailTableViewCell.swift in Sources */,
 				DB21485A2B4FD653002E6BF7 /* MagazineInfo.swift in Sources */,
 				DB8331FA2B501790009B2B7B /* ADTableViewCell.swift in Sources */,

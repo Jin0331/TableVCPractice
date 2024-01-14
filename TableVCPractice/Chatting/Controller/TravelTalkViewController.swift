@@ -19,7 +19,6 @@ class TravelTalkViewController: UIViewController {
         configureUIView()
         configureDesign()
     }
-
 }
 
 //MARK: - extension
@@ -34,6 +33,10 @@ extension TravelTalkViewController:setUIView {
         // 개인 채팅방 XIB
         let xib1 = UINib(nibName: TravelChatMainTableViewCell.identifier, bundle: nil)
         chatTableView.register(xib1, forCellReuseIdentifier: TravelChatMainTableViewCell.identifier)
+        
+        // 단톡방 채팅방 XIB
+        let xib2 = UINib(nibName: TravelChatMainTable4TableViewCell.identifier, bundle: nil)
+        chatTableView.register(xib2, forCellReuseIdentifier: TravelChatMainTable4TableViewCell.identifier)
     }
     
     func configureDesign() {
@@ -60,13 +63,31 @@ extension TravelTalkViewController : UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         // 여기서 cell 2개 받아야 됨
-        // 우선 개인 채팅방부터 하고. 추후 구현
-        let userCell = tableView.dequeueReusableCell(withIdentifier: TravelChatMainTableViewCell.identifier, for: indexPath) as! TravelChatMainTableViewCell
+        // 우선 개인 채팅방부터 하고. 추후
+//        let userCell = tableView.dequeueReusableCell(withIdentifier: TravelChatMainTableViewCell.identifier, for: indexPath) as! TravelChatMainTableViewCell
+//        
+//        let multiUserCell = tableView.dequeueReusableCell(withIdentifier: TravelChatMainTable4TableViewCell.identifier, for: indexPath) as! TravelChatMainTable4TableViewCell
         
-        userCell.setDesignTableCell(cell: mockChatList[indexPath.row])
         
+        if mockChatList[indexPath.row].chatroomImage.count == 1 {
+            let userCell = tableView.dequeueReusableCell(withIdentifier: TravelChatMainTableViewCell.identifier, for: indexPath) as! TravelChatMainTableViewCell
+
+            userCell.selectionStyle = .none
+            userCell.setDesignTableCell(cell: mockChatList[indexPath.row])
+            
+            return userCell
+            
+        } else {
+
+            
+            let multiUserCell = tableView.dequeueReusableCell(withIdentifier: TravelChatMainTable4TableViewCell.identifier, for: indexPath) as! TravelChatMainTable4TableViewCell
+            
+            multiUserCell.selectionStyle = .none
+            multiUserCell.setDesignTableCell(cell: mockChatList[indexPath.row])
+//
+            return multiUserCell
+        }
         
-        return userCell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -82,3 +103,4 @@ extension TravelTalkViewController : UITableViewDelegate, UITableViewDataSource 
         navigationController?.pushViewController(vc, animated: true)
     }
 }
+

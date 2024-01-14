@@ -82,6 +82,8 @@ extension TravelTalkChatViewController : UITableViewDelegate, UITableViewDataSou
         
         let recieverCell = tableView.dequeueReusableCell(withIdentifier: TravelChatReceiverTableViewCell.identifier, for: indexPath) as! TravelChatReceiverTableViewCell
         
+        senderCell.selectionStyle = .none
+        recieverCell.selectionStyle = .none
                 
         if let item = storedData {
             if item.chatList[indexPath.row].user.profileImage != "user"{

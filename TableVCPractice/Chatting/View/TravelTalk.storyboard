@@ -16,12 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="omU-cR-0uI">
-                                <rect key="frame" x="0.0" y="159" width="393" height="659"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
                             <searchBar contentMode="redraw" placeholder="친구 이름을 검색해보세요" translatesAutoresizingMaskIntoConstraints="NO" id="P8A-Uw-f3y">
-                                <rect key="frame" x="0.0" y="110" width="393" height="44"/>
+                                <rect key="frame" x="10" y="114" width="372" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="zmh-GW-BYH"/>
                                 </constraints>
@@ -30,17 +26,21 @@
                                     <outlet property="delegate" destination="Y6W-OH-hqX" id="6xu-Ot-jdu"/>
                                 </connections>
                             </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="omU-cR-0uI">
+                                <rect key="frame" x="10" y="166" width="372" height="644"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="omU-cR-0uI" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="8e3-Gs-Ejv"/>
-                            <constraint firstItem="omU-cR-0uI" firstAttribute="top" secondItem="P8A-Uw-f3y" secondAttribute="bottom" constant="5" id="GIg-22-vkc"/>
-                            <constraint firstItem="omU-cR-0uI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="HiR-dK-deS"/>
-                            <constraint firstItem="omU-cR-0uI" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="TBY-ag-nMc"/>
-                            <constraint firstItem="P8A-Uw-f3y" firstAttribute="trailing" secondItem="omU-cR-0uI" secondAttribute="trailing" id="eaN-9g-nRj"/>
-                            <constraint firstItem="P8A-Uw-f3y" firstAttribute="leading" secondItem="omU-cR-0uI" secondAttribute="leading" id="q6X-PG-7ii"/>
-                            <constraint firstItem="P8A-Uw-f3y" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="7" id="vmL-uW-81a"/>
+                            <constraint firstItem="P8A-Uw-f3y" firstAttribute="centerX" secondItem="omU-cR-0uI" secondAttribute="centerX" id="Dw2-AS-WRq"/>
+                            <constraint firstItem="omU-cR-0uI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="FD9-nM-cvb"/>
+                            <constraint firstItem="omU-cR-0uI" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" constant="-11" id="JiR-2D-6PB"/>
+                            <constraint firstItem="P8A-Uw-f3y" firstAttribute="trailing" secondItem="omU-cR-0uI" secondAttribute="trailing" id="ZiR-mi-dqU"/>
+                            <constraint firstItem="omU-cR-0uI" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" constant="-16" id="ecB-kC-yBf"/>
+                            <constraint firstItem="P8A-Uw-f3y" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="11" id="vmL-uW-81a"/>
+                            <constraint firstItem="omU-cR-0uI" firstAttribute="top" secondItem="P8A-Uw-f3y" secondAttribute="bottom" id="wWE-MB-o9F"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Travle Talk" id="0fL-4g-6WS"/>
@@ -51,7 +51,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1058.7786259541983" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="1052.6717557251909" y="-2.1126760563380285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4dw-bx-obm">

@@ -12,13 +12,20 @@ class CityInfoViewController: UIViewController {
     
     @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var cityCollectionView: UICollectionView!
+    @IBOutlet var searchBar: UISearchBar!
     
-    var originList = CityInfo().city
-    var cityList = CityInfo().city {
+    var cityList = CityInfo().city { // segment 용
+        didSet {
+            cityListSearch = cityList
+            cityCollectionView.reloadData()
+        }
+    }
+    var cityListSearch = CityInfo().city {
         didSet {
             cityCollectionView.reloadData()
         }
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,17 +40,15 @@ class CityInfoViewController: UIViewController {
     
     @IBAction func segmentMoved(_ sender: UISegmentedControl) {
         print(sender.selectedSegmentIndex)
-        cityList = CityInfo().city // 초기화
+        cityListSearch = cityList // 초기화
         
-        var segmentIndex = sender.selectedSegmentIndex
-        
-        print("segmentIndex \(segmentIndex)")
+        let segmentIndex = sender.selectedSegmentIndex
         
         switch segmentIndex {
         case CitySegemnt.domestic.index, CitySegemnt.foreign.index :
-            cityList = travleFiltering(arr: cityList, segmentIndex: segmentIndex)
+            cityListSearch = travleFiltering(arr: cityListSearch, segmentIndex: segmentIndex)
         default : // CitySegemnt.all.index :
-            cityList = originList
+            cityListSearch = cityList
         }
     }
 }
@@ -78,14 +83,14 @@ extension CityInfoViewController : UICollectionViewDelegate, UICollectionViewDat
     // Collection View 관련
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return cityList.count
+        return cityListSearch.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = cityCollectionView.dequeueReusableCell(withReuseIdentifier: CityInfoCollectionViewCell.identifier, for: indexPath) as! CityInfoCollectionViewCell
         
-        let items = cityList[indexPath.item]
+        let items = cityListSearch[indexPath.item]
         
         cell.configureImageIntoCell(cell: items)
         
@@ -101,7 +106,6 @@ extension CityInfoViewController : UICollectionViewDelegate, UICollectionViewDat
     }
 }
 
-// String 처리 함수
 extension CityInfoViewController {
     func travleFiltering(arr : [City], segmentIndex sg : Int ) -> [City] {
         let temp = arr.map({ (item : City) -> City? in
@@ -116,4 +120,34 @@ extension CityInfoViewController {
         })
         return temp.compactMap{$0}
     }
+}
+
+extension CityInfoViewController : UISearchBarDelegate {
+    
+    func configureSearchBar() {
+        searchBar.delegate = self
+    }
+    
+    func filterFunction () {
+        var filterData : [City] = []
+        print(searchBar.text!)
+        
+        if searchBar.text == "" {
+            cityListSearch = cityList
+        } else {
+            for item in cityListSearch {
+                if item.city_name.contains(searchBar.text!) ||  item.city_english_name.contains(searchBar.text!) ||
+                    item.city_explain.contains(searchBar.text!) {
+                    filterData.append(item)
+                    print(filterData)
+                } // if
+            } // for
+            cityListSearch = filterData
+        }
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filterFunction()
+    }
+    
 }

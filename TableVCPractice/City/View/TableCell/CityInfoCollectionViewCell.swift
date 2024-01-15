@@ -18,8 +18,6 @@ class CityInfoCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var mainTitleLabel: UILabel!
     @IBOutlet weak var subTitleLabel: UILabel!
     
-    static let identifier = "CityInfoCollectionViewCell"
-    
     // 공통적인 부분에 대한 설정. 코드 경량화를 위한 부분. class 아님
     override func awakeFromNib() {
         defaultCellConfigure()

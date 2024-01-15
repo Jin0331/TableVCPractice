@@ -100,7 +100,7 @@
         <!--Magazine-->
         <scene sceneID="6Qg-yR-hI8">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6FZ-ML-SN1" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MagazineInfoTableViewController" automaticallyAdjustsScrollViewInsets="NO" id="6FZ-ML-SN1" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Magazine" image="4.circle" catalog="system" id="dP9-Qj-hGe"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZY7-fh-NcD">

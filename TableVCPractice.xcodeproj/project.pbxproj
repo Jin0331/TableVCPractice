@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DB2148532B4FD2C8002E6BF7 /* Case.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB2148522B4FD2C8002E6BF7 /* Case.storyboard */; };
-		DB2148552B4FD3A0002E6BF7 /* Magazine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB2148542B4FD3A0002E6BF7 /* Magazine.storyboard */; };
+		DB2148552B4FD3A0002E6BF7 /* MagazineInfoTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB2148542B4FD3A0002E6BF7 /* MagazineInfoTableViewController.storyboard */; };
 		DB2148592B4FD5E5002E6BF7 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DB2148582B4FD5E5002E6BF7 /* Kingfisher */; };
 		DB21485A2B4FD653002E6BF7 /* MagazineInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2148502B4FD201002E6BF7 /* MagazineInfo.swift */; };
 		DB21485F2B4FD748002E6BF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB21485E2B4FD748002E6BF7 /* Main.storyboard */; };
@@ -64,7 +64,7 @@
 /* Begin PBXFileReference section */
 		DB2148502B4FD201002E6BF7 /* MagazineInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineInfo.swift; sourceTree = "<group>"; };
 		DB2148522B4FD2C8002E6BF7 /* Case.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Case.storyboard; sourceTree = "<group>"; };
-		DB2148542B4FD3A0002E6BF7 /* Magazine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Magazine.storyboard; sourceTree = "<group>"; };
+		DB2148542B4FD3A0002E6BF7 /* MagazineInfoTableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MagazineInfoTableViewController.storyboard; sourceTree = "<group>"; };
 		DB21485E2B4FD748002E6BF7 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		DB2148602B50058D002E6BF7 /* TravelModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelModel.swift; sourceTree = "<group>"; };
 		DB2148622B500636002E6BF7 /* CityDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CityDetailViewController.storyboard; sourceTree = "<group>"; };
@@ -197,7 +197,7 @@
 		DB21485C2B4FD6F8002E6BF7 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				DB2148542B4FD3A0002E6BF7 /* Magazine.storyboard */,
+				DB2148542B4FD3A0002E6BF7 /* MagazineInfoTableViewController.storyboard */,
 				DBDDDE362B4C289F00DBDB62 /* MagazineInfoTableViewCell.swift */,
 			);
 			path = View;
@@ -445,7 +445,7 @@
 				DBF8B7652B512A2C00A650D2 /* TravelChatSenderTableViewCell.xib in Resources */,
 				DBF8B7612B512A1B00A650D2 /* TravelChatReceiverTableViewCell.xib in Resources */,
 				DB2AF7ED2B4A889700FFB834 /* CityInfoViewController.storyboard in Resources */,
-				DB2148552B4FD3A0002E6BF7 /* Magazine.storyboard in Resources */,
+				DB2148552B4FD3A0002E6BF7 /* MagazineInfoTableViewController.storyboard in Resources */,
 				DBEF1D922B5030EE005E1293 /* AD.storyboard in Resources */,
 				DBDDDE592B4D7B8600DBDB62 /* CityInfoCollectionViewCell.xib in Resources */,
 				DBEF1D902B5030E4005E1293 /* Travel.storyboard in Resources */,
@@ -645,7 +645,7 @@
 				INFOPLIST_FILE = TableVCPractice/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = TravelTalkViewController;
+				INFOPLIST_KEY_UIMainStoryboardFile = MagazineInfoTableViewController;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -676,7 +676,7 @@
 				INFOPLIST_FILE = TableVCPractice/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = TravelTalkViewController;
+				INFOPLIST_KEY_UIMainStoryboardFile = MagazineInfoTableViewController;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (

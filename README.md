@@ -1,6 +1,10 @@
-### 1월 15일 (금) - 과제
+### 1월 15일 (월) - 과제
 
-![dd](https://github.com/Jin0331/TableVCPractice/assets/42958809/ce9200d3-b70c-4aa6-9b57-2076ddd95b8e)
+#### 10회차 과제 업데이트 - 여행 매거진 
+![magazine](https://github.com/Jin0331/TableVCPractice/assets/42958809/a916ee00-55d9-4ebf-90a0-a2e90371c4dc)
 
->1. Label의 여백을 주는 방법과 UISearchController 기능의 구현을 공부해야 할 것 같다
->2. 처음에는 코드를 구조있게 짜보려고 했으나,, 시간이 갈 수록 마음이 급해지다보니 이곳저곳에서 코드가 복잡해진 것 같다. ㅎㅎ
+
+#### 11회차 과제 업데이트 - 여행 인기 도시
+![city](https://github.com/Jin0331/TableVCPractice/assets/42958809/4cf36a94-84b4-4b9b-b5cc-2fbf8a48042e)
+
+> 대소문자 구분, whitespace 처리 적용

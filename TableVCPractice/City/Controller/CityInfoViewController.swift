@@ -10,15 +10,19 @@ import Kingfisher
 
 class CityInfoViewController: UIViewController {
     
-    var cityList = CityInfo().city
-    var segmentIndex : Int = 0
-    
     @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var cityCollectionView: UICollectionView!
     
+    var originList = CityInfo().city
+    var cityList = CityInfo().city {
+        didSet {
+            cityCollectionView.reloadData()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         connectCollectionView()
         
         // layout
@@ -31,19 +35,17 @@ class CityInfoViewController: UIViewController {
         print(sender.selectedSegmentIndex)
         cityList = CityInfo().city // 초기화
         
-        segmentIndex = sender.selectedSegmentIndex
+        var segmentIndex = sender.selectedSegmentIndex
         
         print("segmentIndex \(segmentIndex)")
         
         switch segmentIndex {
-        case 1,2 :
+        case CitySegemnt.domestic.index, CitySegemnt.foreign.index :
             cityList = travleFiltering(arr: cityList, segmentIndex: segmentIndex)
-        default :
-            cityList = CityInfo().city
+        default : // CitySegemnt.all.index :
+            cityList = originList
+        }
     }
-        cityCollectionView.reloadData()
-    }
-
 }
 
 
@@ -60,7 +62,7 @@ extension CityInfoViewController : UICollectionViewDelegate, UICollectionViewDat
         cityCollectionView.register(xib, forCellWithReuseIdentifier:  CityInfoCollectionViewCell.identifier)
     }
     
-    func configureCellLayout () -> UICollectionViewFlowLayout {
+    func configureCellLayout() -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
         
         let spacing : CGFloat = 15
@@ -68,9 +70,8 @@ extension CityInfoViewController : UICollectionViewDelegate, UICollectionViewDat
         
         layout.itemSize = CGSize(width: cellWidth / 2, height: (cellWidth+60) / 2) // 셀의 크기
         layout.sectionInset = UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)
-//        layout.minimumLineSpacing = 10
-//        layout.minimumInteritemSpacing = 5
         layout.scrollDirection = .vertical
+        
         return layout
     }
     
@@ -85,9 +86,9 @@ extension CityInfoViewController : UICollectionViewDelegate, UICollectionViewDat
         let cell = cityCollectionView.dequeueReusableCell(withReuseIdentifier: CityInfoCollectionViewCell.identifier, for: indexPath) as! CityInfoCollectionViewCell
         
         let items = cityList[indexPath.item]
-
+        
         cell.configureImageIntoCell(cell: items)
-
+        
         return cell
     }
     

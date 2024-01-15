@@ -19,12 +19,8 @@ class TravelChatReceiverTableViewCell: UITableViewCell {
     
 }
 
-extension TravelChatReceiverTableViewCell : setTableViewCell {
-    
-    static var identifier: String {
-        return "TravelChatReceiverTableViewCell"
-    }
-    
+extension TravelChatReceiverTableViewCell {
+        
     func setDesignTableCell(cell: Chat) {
         
         chatLabel.text = cell.message

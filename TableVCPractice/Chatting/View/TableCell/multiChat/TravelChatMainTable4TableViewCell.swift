@@ -20,11 +20,7 @@ class TravelChatMainTable4TableViewCell: UITableViewCell {
     }
 }
 
-extension TravelChatMainTable4TableViewCell : setTableViewCell {
-    static var identifier: String {
-        return "TravelChatMainTable4TableViewCell"
-    }
-    
+extension TravelChatMainTable4TableViewCell  {    
     func setDesignTableCell(cell : ChatRoom) {
         for index in 0...3 {
             profileImage[index].image = UIImage(named: cell.chatroomImage[index])

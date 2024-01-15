@@ -20,12 +20,8 @@ class TravelChatMainTableViewCell: UITableViewCell {
     }
 }
 
-extension TravelChatMainTableViewCell : setTableViewCell {
-    
-    static var identifier: String {
-        return "TravelChatMainTableViewCell"
-    }
-    
+extension TravelChatMainTableViewCell  {
+        
     func setDesignTableCell(cell : ChatRoom) {
         //image
         chatImage.image = UIImage(named: cell.chatroomImage[0])

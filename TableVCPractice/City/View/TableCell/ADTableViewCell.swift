@@ -11,9 +11,7 @@ class ADTableViewCell: UITableViewCell {
 
     @IBOutlet weak var mainLabel: UILabel!
     @IBOutlet weak var adLabel: UILabel!
-    
-    static let identifier = "ADTableViewCell"
-    
+        
     override func awakeFromNib() {
         super.awakeFromNib()
         

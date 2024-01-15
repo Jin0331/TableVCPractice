@@ -24,9 +24,7 @@ class TravelTalkChatViewController: UIViewController {
 
 }
 
-extension TravelTalkChatViewController : setUIView {
-    static var identifier: String = "TravelTalkChat"
-    static var storyboard: String = "TravelTalkChat"
+extension TravelTalkChatViewController {
     
     func configureUIView() {
         chatTableView.delegate = self

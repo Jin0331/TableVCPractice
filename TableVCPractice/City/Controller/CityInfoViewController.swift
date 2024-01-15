@@ -39,7 +39,6 @@ class CityInfoViewController: UIViewController {
     }
     
     @IBAction func segmentMoved(_ sender: UISegmentedControl) {
-        print(sender.selectedSegmentIndex)
         cityListSearch = cityList // 초기화
         
         let segmentIndex = sender.selectedSegmentIndex
@@ -109,8 +108,6 @@ extension CityInfoViewController : UICollectionViewDelegate, UICollectionViewDat
 extension CityInfoViewController {
     func travleFiltering(arr : [City], segmentIndex sg : Int ) -> [City] {
         let temp = arr.map({ (item : City) -> City? in
-            print(type(of: item.domestic_travel))
-            print(sg)
             let sgBool = sg == 1 ? true : false // 0은 들어오지 않는다. 오직 1,2
             if item.domestic_travel == sgBool {
                 return item
@@ -131,18 +128,18 @@ extension CityInfoViewController : UISearchBarDelegate {
     func filterFunction () {
         var filterData : [City] = []
         let searchKeyword : String = searchBar.text!.lowercased().trimmingCharacters(in: .whitespaces) // 대소문자구분 x, whitespaces 제거 검색
+        print(searchKeyword)
         
-        if searchKeyword == "" {
-            cityListSearch = cityList
-        } else {
+        if searchKeyword != "" {
             for item in cityListSearch {
                 if item.city_name.contains(searchKeyword) ||  item.city_english_name.lowercased().contains(searchKeyword) ||
                     item.city_explain.contains(searchKeyword) {
                     filterData.append(item)
-                    print(filterData)
                 } // if
             } // for
             cityListSearch = filterData
+        } else {
+            segmentMoved(segmentControl)
         }
     }
     

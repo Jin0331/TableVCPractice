@@ -8,10 +8,7 @@
 import UIKit
 
 class TravelViewController: UIViewController {
-    
-    static let storyboard = "Travel"
-    static let identifier = "Travel"
-    
+        
     @IBOutlet weak var travelLabel: UILabel!
         
     override func viewDidLoad() {

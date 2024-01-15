@@ -9,8 +9,6 @@ import UIKit
 import Cosmos
 
 class CityDetailTableViewCell: UITableViewCell {
-
-    static var identifier = "CityDetailTableViewCell"
     
     @IBOutlet weak var mainTextLabel : UILabel!
     @IBOutlet weak var subTextLabel : UILabel!

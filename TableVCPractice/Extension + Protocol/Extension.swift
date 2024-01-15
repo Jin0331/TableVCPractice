@@ -10,3 +10,16 @@ extension UITextView {
             contentOffset.y = -positiveTopOffset
     }
  }
+
+//MARK: - Extension
+extension UIViewController : ResuableProtocol {
+    static var identifier : String {
+        return String(describing: self)
+    }
+}
+
+extension UITableViewCell : ResuableProtocol {
+    static var identifier : String {
+        return String(describing: self)
+    }
+}

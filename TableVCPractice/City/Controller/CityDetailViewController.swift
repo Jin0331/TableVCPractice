@@ -9,8 +9,6 @@ import UIKit
 
 class CityDetailViewController: UIViewController {
 
-    static let identifier = "CityDetailViewController" // Controller ID
-    static let stroyboard = "CityDetail" // storyBoard ID
     let cityDetail = TravelInfo()
     
     @IBOutlet weak var detailTableView: UITableView!
@@ -31,8 +29,6 @@ extension CityDetailViewController : UITableViewDelegate, UITableViewDataSource 
     
     func configureTableView() {
     
-//        detailTableView.backgroundColor = .clear
-        
         detailTableView.delegate = self
         detailTableView.dataSource = self
         
@@ -88,7 +84,7 @@ extension CityDetailViewController {
         let travel = cityDetail.travel[indexPath.row]
         
         if travel.ad {
-            let sb = UIStoryboard(name: ADViewController.storyboard, bundle: nil)
+            let sb = UIStoryboard(name: ADViewController.identifier, bundle: nil)
             let vc = sb.instantiateViewController(withIdentifier: ADViewController.identifier) as! ADViewController
             
             let nav = UINavigationController(rootViewController: vc)
@@ -96,7 +92,7 @@ extension CityDetailViewController {
             
             present(nav, animated: true)
         } else {
-            let sb = UIStoryboard(name: TravelViewController.storyboard, bundle: nil)
+            let sb = UIStoryboard(name: TravelViewController.identifier, bundle: nil)
             let vc = sb.instantiateViewController(withIdentifier: TravelViewController.identifier) as! TravelViewController
             
             navigationController?.pushViewController(vc, animated: true)

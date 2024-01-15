@@ -22,11 +22,8 @@ class TravelChatSenderTableViewCell: UITableViewCell {
     
 }
 
-extension TravelChatSenderTableViewCell : setTableViewCell {
+extension TravelChatSenderTableViewCell {
     
-    static var identifier: String {
-        return "TravelChatSenderTableViewCell"
-    }
     func setDesignTableCell(cell: Chat) {
         // image
         profileImageView.image = UIImage(named: cell.user.profileImage)

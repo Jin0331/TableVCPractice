@@ -93,7 +93,7 @@ extension CityInfoViewController : UICollectionViewDelegate, UICollectionViewDat
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let sb = UIStoryboard(name: CityDetailViewController.stroyboard, bundle: nil)
+        let sb = UIStoryboard(name: CityDetailViewController.identifier, bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: CityDetailViewController.identifier) as! CityDetailViewController
         
         navigationController?.pushViewController(vc, animated: true)

@@ -22,10 +22,8 @@ class TravelTalkViewController: UIViewController {
 }
 
 //MARK: - extension
-extension TravelTalkViewController:setUIView {
-    static var identifier: String = "TravelTalkViewController"
-    static var storyboard: String = "TravelTalkViewController"
-    
+extension TravelTalkViewController  {
+        
     func configureUIView() {
         chatTableView.delegate = self
         chatTableView.dataSource = self
@@ -92,9 +90,9 @@ extension TravelTalkViewController : UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        print(TravelTalkChatViewController.storyboard)
+        print(TravelTalkChatViewController.identifier)
         
-        let sb = UIStoryboard(name: TravelTalkChatViewController.storyboard, bundle: nil)
+        let sb = UIStoryboard(name: TravelTalkChatViewController.identifier, bundle: nil)
         let vc = sb.instantiateViewController(identifier: TravelTalkChatViewController.identifier) as! TravelTalkChatViewController
         
         // 데이터 전달

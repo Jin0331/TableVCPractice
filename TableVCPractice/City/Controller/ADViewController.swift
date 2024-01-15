@@ -9,9 +9,6 @@ import UIKit
 
 class ADViewController: UIViewController {
     
-    static let storyboard = "AD"
-    static let identifier = "AD"
-
     @IBOutlet weak var adLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()

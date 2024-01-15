@@ -7,20 +7,41 @@
 
 import UIKit
 
-protocol MagazineUIConfigure {
-    func cellDesign()
-}
-
-class MagazineInfoTableViewCell: UITableViewCell, MagazineUIConfigure {
-
+class MagazineInfoTableViewCell: UITableViewCell {
     
- //MARK: - IBOutler
+    
+    //MARK: - IBOutler
     @IBOutlet weak var mainImageView: UIImageView!
     @IBOutlet weak var mainTitle: UILabel!
     @IBOutlet weak var subTitle: UILabel!
     @IBOutlet weak var dateTitle: UILabel!
- 
-    func cellDesign() {
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+    }
+}
+
+extension MagazineInfoTableViewCell {
+    func cellDesign(cell : Magazine) {
+        
+        // set UI
+        let url = URL(string: cell.photo_image)!
+        mainImageView.kf.setImage(with: url)
+        
+        // main label
+        mainTitle.text = cell.title
+        
+        //sub label
+        subTitle.text = cell.subtitle
+        
+        //date
+        if let date = cell.newDate {
+            dateTitle.text = date
+        } else {
+            dateTitle.text = ""
+        }
+        
         mainImageView.contentMode = .scaleAspectFill
         mainImageView.layer.cornerRadius = 15
         
@@ -34,5 +55,4 @@ class MagazineInfoTableViewCell: UITableViewCell, MagazineUIConfigure {
         dateTitle.font = .boldSystemFont(ofSize: 15)
         dateTitle.textColor = .lightGray
     }
-    
 }

@@ -40,11 +40,13 @@ extension CityDetailTableViewCell {
     }
     
     func ratingComoView(cell : Travel) {
+        cosmosView.settings.updateOnTouch = false
         cosmosView.settings.totalStars = 5
         cosmosView.settings.emptyColor = .white
         cosmosView.settings.textFont = .systemFont(ofSize: 15)
         cosmosView.settings.textColor = .gray
         cosmosView.settings.starSize = 17
+        cosmosView.settings.fillMode = .precise
         
         cosmosView.rating = cell.grade ?? 0
         

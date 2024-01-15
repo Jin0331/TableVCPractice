@@ -10,40 +10,47 @@ import Kingfisher
 
 class CityInfoViewController: UIViewController {
     
-    var cityList = CityInfo().city
-    var segmentIndex : Int = 0
-    
     @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var cityCollectionView: UICollectionView!
+    @IBOutlet var searchBar: UISearchBar!
+    
+    var cityList = CityInfo().city { // segment 용
+        didSet {
+            cityListSearch = cityList
+            cityCollectionView.reloadData()
+        }
+    }
+    var cityListSearch = CityInfo().city {
+        didSet {
+            cityCollectionView.reloadData()
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         connectCollectionView()
         
         // layout
         cityCollectionView.collectionViewLayout = configureCellLayout()
         
-        segmentMoved(segmentControl)
+        segmentMoved(segmentControl) // IBAction 초기실행
     }
     
     @IBAction func segmentMoved(_ sender: UISegmentedControl) {
         print(sender.selectedSegmentIndex)
-        cityList = CityInfo().city // 초기화
+        cityListSearch = cityList // 초기화
         
-        segmentIndex = sender.selectedSegmentIndex
-        
-        print("segmentIndex \(segmentIndex)")
+        let segmentIndex = sender.selectedSegmentIndex
         
         switch segmentIndex {
-        case 1,2 :
-            cityList = travleFiltering(arr: cityList, segmentIndex: segmentIndex)
-        default :
-            cityList = CityInfo().city
+        case CitySegemnt.domestic.index, CitySegemnt.foreign.index :
+            cityListSearch = travleFiltering(arr: cityListSearch, segmentIndex: segmentIndex)
+        default : // CitySegemnt.all.index :
+            cityListSearch = cityList
+        }
     }
-        cityCollectionView.reloadData()
-    }
-
 }
 
 
@@ -60,7 +67,7 @@ extension CityInfoViewController : UICollectionViewDelegate, UICollectionViewDat
         cityCollectionView.register(xib, forCellWithReuseIdentifier:  CityInfoCollectionViewCell.identifier)
     }
     
-    func configureCellLayout () -> UICollectionViewFlowLayout {
+    func configureCellLayout() -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
         
         let spacing : CGFloat = 15
@@ -68,26 +75,25 @@ extension CityInfoViewController : UICollectionViewDelegate, UICollectionViewDat
         
         layout.itemSize = CGSize(width: cellWidth / 2, height: (cellWidth+60) / 2) // 셀의 크기
         layout.sectionInset = UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)
-//        layout.minimumLineSpacing = 10
-//        layout.minimumInteritemSpacing = 5
         layout.scrollDirection = .vertical
+        
         return layout
     }
     
     // Collection View 관련
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return cityList.count
+        return cityListSearch.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = cityCollectionView.dequeueReusableCell(withReuseIdentifier: CityInfoCollectionViewCell.identifier, for: indexPath) as! CityInfoCollectionViewCell
         
-        let items = cityList[indexPath.item]
-
+        let items = cityListSearch[indexPath.item]
+        
         cell.configureImageIntoCell(cell: items)
-
+        
         return cell
     }
     
@@ -100,7 +106,6 @@ extension CityInfoViewController : UICollectionViewDelegate, UICollectionViewDat
     }
 }
 
-// String 처리 함수
 extension CityInfoViewController {
     func travleFiltering(arr : [City], segmentIndex sg : Int ) -> [City] {
         let temp = arr.map({ (item : City) -> City? in
@@ -115,4 +120,34 @@ extension CityInfoViewController {
         })
         return temp.compactMap{$0}
     }
+}
+
+extension CityInfoViewController : UISearchBarDelegate {
+    
+    func configureSearchBar() {
+        searchBar.delegate = self
+    }
+    
+    func filterFunction () {
+        var filterData : [City] = []
+        let searchKeyword : String = searchBar.text!.lowercased().trimmingCharacters(in: .whitespaces) // 대소문자구분 x, whitespaces 제거 검색
+        
+        if searchKeyword == "" {
+            cityListSearch = cityList
+        } else {
+            for item in cityListSearch {
+                if item.city_name.contains(searchKeyword) ||  item.city_english_name.lowercased().contains(searchKeyword) ||
+                    item.city_explain.contains(searchKeyword) {
+                    filterData.append(item)
+                    print(filterData)
+                } // if
+            } // for
+            cityListSearch = filterData
+        }
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filterFunction()
+    }
+    
 }

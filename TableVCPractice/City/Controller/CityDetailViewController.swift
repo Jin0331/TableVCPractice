@@ -8,27 +8,27 @@
 import UIKit
 
 class CityDetailViewController: UIViewController {
-
+    
     let cityDetail = TravelInfo()
     
     @IBOutlet weak var detailTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         navigationItem.title = "도시 상세 정보"
         navigationController?.navigationBar.tintColor = .black
         
         configureTableView()
     }
-
+    
 }
 
 //MARK: - Extension
 extension CityDetailViewController : UITableViewDelegate, UITableViewDataSource {
     
     func configureTableView() {
-    
+        
         detailTableView.delegate = self
         detailTableView.dataSource = self
         
@@ -44,12 +44,9 @@ extension CityDetailViewController : UITableViewDelegate, UITableViewDataSource 
 extension CityDetailViewController {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let travel = cityDetail.travel[indexPath.row]
+        var height : CGFloat = travel.ad ? 110 : 150
         
-        if !travel.ad {
-            return 150
-        } else {
-            return 110
-        }
+        return height
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -101,14 +98,12 @@ extension CityDetailViewController {
     
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let like = UIContextualAction(style: .normal, title: "Like") { (UIContextualAction, UIView, success: @escaping (Bool) -> Void) in
-            print("Like 클릭 됨")
             success(true)
         }
         like.backgroundColor = .systemPink
         
         
         let share = UIContextualAction(style: .normal, title: "Share") { (UIContextualAction, UIView, success: @escaping (Bool) -> Void) in
-            print("Share 클릭 됨")
             success(true)
         }
         share.backgroundColor = .systemTeal

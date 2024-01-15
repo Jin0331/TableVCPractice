@@ -18,7 +18,10 @@ class MagazineInfoTableViewController: UITableViewController {
         tableView.separatorStyle = .none// 구분선 없애기
     }
 
-    //MARK: - cell
+}
+
+extension MagazineInfoTableViewController  {
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return magzineList.magazine.count
     }
@@ -26,24 +29,11 @@ class MagazineInfoTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         // image
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MagazineInfoTableViewCell", for: indexPath) as! MagazineInfoTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: MagazineInfoTableViewCell.identifier, for: indexPath) as! MagazineInfoTableViewCell
         
-        cell.cellDesign()
+        cell.selectionStyle = .none
         
-        let url = URL(string: magzineList.magazine[indexPath.row].photo_image)!
-        cell.mainImageView.kf.setImage(with: url)
-        
-        // main label
-        cell.mainTitle.text = magzineList.magazine[indexPath.row].title
-        
-        // sub label
-        cell.subTitle.text = magzineList.magazine[indexPath.row].subtitle
-
-        if let date = stringToDate(magzineList.magazine[indexPath.row].date) {
-            cell.dateTitle.text = date
-        } else {
-            cell.dateTitle.text = ""
-        }
+        cell.cellDesign(cell : magzineList.magazine[indexPath.row])
         
         return cell
     }
@@ -52,33 +42,15 @@ class MagazineInfoTableViewController: UITableViewController {
         
         return 450
     }
-
-}
-
-extension MagazineInfoTableViewController {
-    //MARK: - function
-    func stringToDate(_ string : String) -> String? {
-
-        let str = Array(string)
-        var strChange : [String] = []
-        for (index, value) in str.enumerated() {
-            print(value)
-            strChange.append(String(value))
-            if index % 2 != 0 && index != str.count - 1{
-                strChange.append("-")
-            }
-        }
-
-        // string to date... 이게 맞는지 모르겠다 일단 결과는 나옴
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yy-MM-dd"
-        let convertDate = dateFormatter.date(from: strChange.joined(separator: ""))
-
-        let korDateFormatter = DateFormatter()
-        korDateFormatter.dateFormat = "yy년 M월 d일"
-        korDateFormatter.locale = Locale(identifier:"ko_KR")
-
-        return korDateFormatter.string(from: convertDate!)
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let sb = UIStoryboard(name: MagzineInfoViewController.identifier, bundle: nil)
+        
+        let vc = sb.instantiateViewController(withIdentifier: MagzineInfoViewController.identifier) as! MagzineInfoViewController
+        
+        vc.urlString = magzineList.magazine[indexPath.row].link
+                
+        navigationController?.pushViewController(vc, animated: true)
     }
-
 }

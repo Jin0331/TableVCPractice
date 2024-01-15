@@ -13,6 +13,36 @@ struct Magazine {
     var photo_image : String
     var date : String
     var link : String
+    
+    var newDate : String? {
+        return stringToDate(date)
+    }
+    
+    // 내부 함수
+    func stringToDate(_ string : String) -> String? {
+        
+        let str = Array(string)
+        var strChange : [String] = []
+        for (index, value) in str.enumerated() {
+            print(value)
+            strChange.append(String(value))
+            if index % 2 != 0 && index != str.count - 1{
+                strChange.append("-")
+            }
+        }
+        
+        // string to date... 이게 맞는지 모르겠다 일단 결과는 나옴
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yy-MM-dd"
+        let convertDate = dateFormatter.date(from: strChange.joined(separator: ""))
+        
+        let korDateFormatter = DateFormatter()
+        korDateFormatter.dateFormat = "yy년 M월 d일"
+        korDateFormatter.locale = Locale(identifier:"ko_KR")
+        
+        return korDateFormatter.string(from: convertDate!)
+    }
+    
 }
 
 struct MagazineInfo {
@@ -35,3 +65,5 @@ struct MagazineInfo {
 
     ]
 }
+
+

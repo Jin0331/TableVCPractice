@@ -35,7 +35,7 @@ class CityInfoViewController: UIViewController {
         // layout
         cityCollectionView.collectionViewLayout = configureCellLayout()
         
-        segmentMoved(segmentControl)
+        segmentMoved(segmentControl) // IBAction 초기실행
     }
     
     @IBAction func segmentMoved(_ sender: UISegmentedControl) {
@@ -130,14 +130,14 @@ extension CityInfoViewController : UISearchBarDelegate {
     
     func filterFunction () {
         var filterData : [City] = []
-        print(searchBar.text!)
+        let searchKeyword : String = searchBar.text!.lowercased().trimmingCharacters(in: .whitespaces) // 대소문자구분 x, whitespaces 제거 검색
         
-        if searchBar.text == "" {
+        if searchKeyword == "" {
             cityListSearch = cityList
         } else {
             for item in cityListSearch {
-                if item.city_name.contains(searchBar.text!) ||  item.city_english_name.contains(searchBar.text!) ||
-                    item.city_explain.contains(searchBar.text!) {
+                if item.city_name.contains(searchKeyword) ||  item.city_english_name.lowercased().contains(searchKeyword) ||
+                    item.city_explain.contains(searchKeyword) {
                     filterData.append(item)
                     print(filterData)
                 } // if
